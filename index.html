@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>EJSL</title>
+    <!-- <link rel="stylesheet" href="style/reset.css"> -->
+    <link rel="stylesheet" href="style/style.css">
+    <script defer src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&family=IBM+Plex+Mono:wght@700&family=IBM+Plex+Sans:wght@300&family=IBM+Plex+Serif:wght@700&display=swap" rel="stylesheet"> 
+  </head>
+  <body>
+    <div class="site-grid-wraper">
+      <div class="site-grid-nav">
+        <nav class="top-nav">
+          <a href="#" id="top-nav-menu-home">Egil <span>J.</span> Swenning Leyser</a>
+          <ul class="top-nav-menu-list">
+            <li class="top-nav-menu-list-right">
+              <a href="#site-grid-portfolio-content" class="top-nav-menu-list-right-item" id="top-nav-menu-right-portfolio">Portfolio
+              </a>
+            </li>
+            <li class="top-nav-menu-list-right">
+              <a href="#site-grid-about-content" class="top-nav-menu-list-right-item" id="top-nav-menu-right-about">About
+              </a>
+            </li>
+            <li class="top-nav-menu-list-right">
+              <a href="#site-grid-contact-content" class="top-nav-menu-list-right-item" id="top-nav-menu-right-contact">Contact
+              </a>
+            </li>
+          </ul>  
+        </nav>
+      </div>
+      <div class="site-grid-header">
+      <!--
+        <picture>
+          <img src="img/header.jpg" id="header-img">
+        </picture>  
+        TODO: Add image  
+      -->
+      
+      </div>
+      <div class="site-grid-scoll">
+        <div class="site-grid-scoll-img">
+          <picture>
+            <source type="image/svg+xml" srcset="img/scroll.svg" id="site-grid-scoll-img-svg">
+            <img id="site-grid-scoll-img-png" src="img/scroll.png" alt="Scroll Icon">
+          </picture>
+        </div>
+      </div>
+      <div class="site-grid-intro">
+        <div id="intro-div">
+          <p id="intro-text">Intro text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt arcu ipsum, a lacinia orci sollicitudin sit amet.
+          </p>
+        </div>
+      </div>
+      <div class="site-grid-portfolio">
+        <h2 id="site-grid-portfolio-h2">Portfolio</h2>
+      </div>
+      <div class="site-grid-portfolio-content" > 
+      <!-- 
+        TODO: flex to 1/row on phone w/ flex-wrap
+      -->
+        <div class="portfolio-content-img">
+          <a href="#">
+            <img src="img/00-index/07-documasker.png" class="portfolio-content-img-actual">
+          </a>
+        </div>
+        <div class="portfolio-content-img">
+          <a href="#">
+            <img src="img/00-index/06-taxicall.png" class="portfolio-content-img-actual">
+          </a>
+        </div>
+        <div class="portfolio-content-img">
+          <a href="#">
+            <img src="img/00-index/05-serif.png" class="portfolio-content-img-actual">
+          </a>
+        </div>
+        <div class="portfolio-content-img">
+          <a href="portfolio/04-fellow.html">
+            <img src="img/00-index/04-fellow.png" class="portfolio-content-img-actual">
+          </a>
+        </div>
+        <div class="portfolio-content-img">
+          <a href="#">
+            <img src="img/00-index/03-ueb.png" class="portfolio-content-img-actual">
+          </a>
+        </div>
+        <div class="portfolio-content-img">
+          <a href="#">
+            <img src="img/00-index/02-srscard.png" class="portfolio-content-img-actual">
+          </a>
+        </div>
+        <div class="portfolio-content-img">
+          <a href="#">
+            <img src="img/00-index/01-coffecan.png" class="portfolio-content-img-actual">
+          </a> <!-- TODO: add alt -->
+        </div>
+      </div>
+      <div class="site-grid-about">
+        <!--<h1>About</h1>-->
+        <h2 id="site-grid-about-content">About</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie ligula nec velit laoreet, sed dapibus lorem euismod. Duis aliquet congue augue at lacinia. Pellentesque imperdiet lectus eu velit convallis, eget finibus nisl pharetra. Nullam auctor risus in dui pulvinar, vel malesuada quam porttitor. Suspendisse vitae ultrices sapien, vitae vestibulum lacus. Sed quis risus mollis, sagittis dui ut, accumsan sem. Nullam maximus dui eget dapibus tristique. Pellentesque ac ligula mauris. Etiam quis leo vel nisi fringilla aliquam quis in turpis. Suspendisse commodo sit amet lorem nec consectetur. Phasellus sed odio condimentum, placerat leo eget, cursus nulla. Proin hendrerit velit sit amet lorem sodales tempus. Duis consectetur lorem sed lectus lobortis, eget fringilla orci dignissim. Vivamus ut consectetur lectus.</p>
+      </div>
+      <div class="site-grid-contact">
+        <!--<h1>Contact</h1> -->
+        <h2 id="site-grid-contact-content">Contact</h2>
+        <p>Find me at <a href="https://twitter.com/____egil/">Twitter</a>, or send me a mail:</p>
+        <form   action=""
+                method=""
+                class="site-grid-form">
+        <label  for="site-grid-form-name">Name:</label>
+        <input  type="text" 
+                name="name"
+                
+                id="site-grid-form-name"
+                required>
+        <label  for="site-grid-form-mail">Mail:</label>
+        <input  type="email"
+                name="mail"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                id="site-grid-form-mail"
+                required>
+        <label  for="site-grid-form-text">Text:</label>
+        <textarea
+                name="text"
+                id="site-grid-form-text"
+                rows="24"
+                required></textarea>
+        <button id="site-grid-form-button">Send</button>
+      </form>
+      </div>
+      <footer class="site-grid-footer">
+        <p>2021 Egil J. Swenning Leyser</p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,395 @@
+
+/* STANDARD */
+html, body {
+   margin: 0;
+   padding: 0;
+}
+html {
+   font-size: 22px;
+   line-height: 38px;
+   scroll-behavior: smooth;
+}
+body {
+  background-color: rbg(235, 235, 235);
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+@media only screen 
+and (max-width: 812px)
+   { 
+      body {
+         background-color: lightblue;
+      }
+   }
+
+/* MENU */
+.top-nav {
+   display: flex;
+   justify-content: space-between;
+}
+.site-grid-nav {
+   padding: 1em;
+   align-items: center;
+}
+.top-nav-menu-home{
+   display: inline-block;
+   padding-bottom: 1em;
+}
+.top-nav-menu-list{
+   list-style: none;
+   margin: 0;
+   padding-bottom: 0.2em;
+
+}
+.top-nav-menu-list-right{
+   display: inline-block;
+}
+.top-nav-menu-list-right:nth-child(2){
+   padding: 0 1em;
+}
+
+
+
+
+
+
+/* FONTS */
+.top-nav {
+   font-family: 'IBM Plex Serif', serif;
+   font-size: 1.625rem;
+   line-height: 1.538rem;
+}
+h1, h2, h3, h4, h5, h6 {
+   font-family: 'IBM Plex Mono', monospace;
+}
+h1 {
+   margin-top: 3em;
+   font-size: 2.636rem;
+   line-height: 1.552em;
+}
+h2 {
+   margin-top: 3em;
+   font-size: 2.045rem;
+   line-height: 1.578em;
+}
+h3 {
+   font-size: 1.636rem;
+   line-height: 1.611em;
+}
+h4 {
+   font-size: 1.273rem;
+   line-height: 1.643em;
+}
+p {
+   font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+   font-size: 1rem;
+   line-height: 1.727em;
+}
+#intro-text {
+   font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+   font-size: 1.636rem;
+   line-height: 3rem;
+   color: rgb(92, 92, 92);
+   max-width: 40ch;
+}
+code {
+   font-family: 'Fira Code',  'IBM Plex Mono', monospace;
+   font-size: 1rem;
+   line-height: 1rem;
+}
+.site-grid-form input {
+   font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+   font-size: 1rem;
+   line-height: 38px;
+}
+#site-grid-form-text {
+   font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+   font-size: 1rem;
+   line-height: 38px;
+}
+#site-grid-form-button {
+   font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+   font-size: 1rem;
+   line-height: 38px;
+}
+/* INTRO */
+.site-grid-scoll-img {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+#intro-div {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   }
+
+
+ 
+/* LINKS */
+a:link {
+   color: rgb(255, 5, 71);
+   text-decoration: none;
+}
+ 
+a:visited {
+   color: rgb(92, 92, 92);
+   text-decoration: none;
+}
+ 
+a:hover {
+   color: rgb(255, 5, 80);
+   text-decoration: underline;
+}
+ 
+a:active {
+   color: rgb(255, 5, 80);
+   text-decoration: underline;
+}
+
+/* MENU */
+.top-nav a:link {
+   color: rgb(255, 5, 80);
+   text-decoration: none;
+}
+.top-nav-menu-list-right a:link {
+   color: rgb(255, 5, 80);
+   text-decoration: none;
+}
+.top-nav a:visited {
+   color: rgb(255, 5, 80);
+   text-decoration: none;
+}
+.top-nav-menu-list-right a:visited {
+   color: rgb(255, 5, 80);
+   text-decoration: none;
+}
+.top-nav a:hover {
+   color: rgb(255, 5, 80);
+   text-decoration: underline;
+}
+.top-nav-menu-list-right a:hover {
+   color: rgb(255, 5, 80);
+   text-decoration: underline;
+}
+.top-nav a:active {
+   color: rgb(255, 5, 80);
+   text-decoration: none;
+}
+.top-nav-menu-list-right a:active {
+   color: rgb(255, 5, 80);
+   text-decoration: none;
+}
+
+
+
+
+/* GRID */
+.site-grid-wraper {
+   display: grid;
+   grid-template-columns:
+      1fr
+      min(60ch, 100%)
+      1fr;
+
+/*    grid-auto-rows: minmax(100px, auto); */
+}
+.site-grid-nav {
+   grid-column: 1 / 4;
+   grid-row: 1;
+   /* border: 2px solid rgb(233,171,88); */
+   z-index: 2;
+   height: 2em;
+}
+.site-grid-nav:after {
+   content: "";
+   display: table;
+   clear: both;
+}
+.site-grid-header {
+   grid-column: 1 / 4;
+   grid-row: 1 / 5;
+   /* border: 2px solid rgb(233,171,88); */
+   z-index: 1;
+   background-color: rgb(109, 243, 198);
+   height: 100vh;
+}
+.site-grid-scoll {
+   grid-column: 1 / 4;
+   grid-row: 4;
+   /* border: 2px solid rgb(233,171,88); */
+   z-index: 2;
+   padding: 1em;
+}
+.site-grid-intro{
+   grid-column: 1 / 4;
+   grid-row: 2 / 4;
+   z-index: 2;
+}
+.site-grid-portfolio {
+   grid-column: 2;
+   grid-row: 5;
+
+   /* border: 2px solid rgb(233,171,88); */
+}
+.site-grid-portfolio-content{
+   grid-column: 1 / 4;
+   grid-row: 6;
+}
+.site-grid-about {
+   grid-column: 2;
+   grid-row: 7;
+   /* border: 2px solid rgb(233,171,88); */
+}
+.site-grid-contact {
+   grid-column: 2;
+   grid-row: 8;
+   /* border: 2px solid rgb(233,171,88); */
+}
+.site-grid-footer {
+   grid-column: 2;
+   grid-row: 9;
+   /* border: 2px solid rgb(233,171,88); */
+}
+
+.site-grid-portfolio-about {
+   grid-column: 2;
+   grid-row: 2;
+}
+.site-grid-portfolio-iframe {
+   grid-column: 1 / 4;
+   grid-row: 7;
+}
+
+
+/* IMG */
+#header-img {
+   width: 100%;
+}
+#site-grid-scoll-img-svg {
+   height: 70px;
+}
+#site-grid-scoll-img-png {
+   height: 70px;
+}
+
+/* PORTFOLIO */
+.site-grid-portfolio-content {
+   display: inline-flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: left;
+
+   line-height: 0;
+}
+.portfolio-content-img {
+   width: 50%;
+   margin: 0;
+   padding: 0;
+   
+}
+.site-grid-portfolio-content a .portfolio-content-img-actual {
+
+   width: 100%;
+   margin: 0;
+   padding: 0;
+
+}
+.portfolio-content-img-icon-container {
+   display: flex;
+}
+.portfolio-content-img-icon {
+   list-style: none;
+   
+   
+}
+
+.portfolio-content-img-icon li {
+   padding: 0.5em;
+   
+   
+}
+
+.portfolio-content-img-icon-ui, .portfolio-content-img-icon-html {
+   border: 2px solid rgb(255, 5, 71);
+
+}
+
+
+.portfolio-content-img-icon-more {
+   color:rgb(255, 5, 71)
+}
+.portfolio-content-img-icon-more a:link {
+   color: rgb(255, 5, 71);
+   text-decoration: none;
+}
+ 
+.portfolio-content-img-icon-more a:visited {
+   color: rgb(92, 92, 92);
+   text-decoration: none;
+}
+ 
+.portfolio-content-img-icon-more a:hover {
+   color: rgb(255, 5, 80);
+   text-decoration: underline;
+}
+ 
+.portfolio-content-img-icon-more a:active {
+   color: rgb(255, 5, 80);
+   text-decoration: underline;
+}
+
+
+
+/* FORM */
+.site-grid-form input {
+   border: 2px solid rgb(255, 5, 71);
+   border-radius: 3px;
+   width: 100%;
+   height: 2.5em;
+   display: block;
+   box-sizing: border-box;
+   margin-bottom: 1em;
+   padding: 0 0.5em;
+}
+.site-grid-contact input input[type=submit] {
+   box-sizing: content-box;
+}
+#site-grid-form-text {
+   border: 2px solid rgb(255, 5, 71);
+   border-radius: 3px;
+   width: 100%;
+   height: 10em;
+   display: block;
+   box-sizing: border-box;
+   margin-bottom: 1em;
+   padding: 0.5em;
+   resize: none;
+}
+
+
+#site-grid-form-button{
+   margin-top: 2em;
+   height: 2.5em;
+   width: 100%;
+   border: 2px solid rgb(255, 5, 71);
+   border-radius: 3px;
+   background-color: rgb(255,5,71);
+   border: none;
+   background: rgb(255,5,71);
+   background: -moz-linear-gradient(133deg, rgba(255,5,71,1) 0%, rgba(255,5,80,1) 100%);
+   background: -webkit-linear-gradient(133deg, rgba(255,5,71,1) 0%, rgba(255,5,80,1) 100%);
+   background: linear-gradient(133deg, rgba(255,5,71,1) 0%, rgba(255,5,80,1) 100%);
+   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff0547",endColorstr="#ff0550",GradientType=1);
+}
+
+.site-grid-footer{
+   margin-top: 3em;
+}
+
+.site-grid-portfolio-iframe-acutal {
+   width: 100%;
+   border-top: 2px solid rgb(255, 5, 71);
+
+   height: 40em;
+}
