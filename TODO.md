@@ -11,14 +11,10 @@ Test:
                           "footer      footer     footer"
 
 
-  <div><h1>Portfolio</h1></div>
-  display: flex;
-  
-  <div>Content</div> <!-- som det är -->
-  samma för about och content;
+
 
 
 a{
-  transition-property: background-color;
+  transition-property: color;
   transition-duration: 0,5s;
 }
