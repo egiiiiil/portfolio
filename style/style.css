@@ -295,6 +295,13 @@ a:active {
    padding: 0;
 
 }
+
+
+
+
+
+
+/* PORTFOLIO ICONS */
 .portfolio-content-img-icon-container {
    display: flex;
 }
@@ -309,12 +316,22 @@ a:active {
    
    
 }
-
+.portfolio-content-img-icon-ui, .portfolio-content-img-icon-html, .portfolio-content-img-icon-more {
+   display: inline-block;
+}
 .portfolio-content-img-icon-ui, .portfolio-content-img-icon-html {
    border: 2px solid rgb(255, 5, 71);
-
+   height: 1em;
+   
 }
-
+.portfolio-content-img-icon-ui {
+   width: 1em;
+   border-radius: 99em;
+}
+.portfolio-content-img-icon-html {
+   border: 2px solid rgb(255, 5, 71);
+   border-radius: 99em;
+}
 
 .portfolio-content-img-icon-more {
    color:rgb(255, 5, 71)
