@@ -2,19 +2,21 @@
 
 
 
-Test: 
-   grid-template-areas:   "nav           nav         nav"
-			                    "empty      portfolio-content      empty"
-                          "portfolio portfolio portfolio"
-                          "empty      about     empty"
-                          "empty      contact      empty"
-                          "footer      footer     footer"
-
-
-
-
 
 a{
   transition-property: color;
   transition-duration: 0,5s;
 }
+
+
+gradient for text on img:after
+
+a:active{
+  top: 2px;
+} 
+  
+
+
+
+
+alt=""
