@@ -4,19 +4,5 @@
 
 
 a{
-  transition-property: color;
-  transition-duration: 0,5s;
+  Byt färger.
 }
-
-
-gradient for text on img:after
-
-a:active{
-  top: 2px;
-} 
-  
-
-
-
-
-alt=""
