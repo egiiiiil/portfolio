@@ -2,12 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EJSL</title>
     <!-- <link rel="stylesheet" href="style/reset.css"> -->
     <link rel="stylesheet" href="style/style.css">
     <script defer src="script.js"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&family=IBM+Plex+Mono:wght@700&family=IBM+Plex+Sans:wght@300&family=IBM+Plex+Serif:wght@700&display=swap" rel="stylesheet"> 
   </head>
   <body>
     <div class="site-grid-wraper">
@@ -32,9 +31,18 @@
       </div>
       <div class="site-grid-header">
       
-        
-          <img src="img/background.jpg" id="header-img" alt="">
-          
+        <picture class="site-grid-header-picure"> 
+          <!-- PHONE -->
+          <source media='(max-width: 812px)'
+                  srcset='img/background-m.jpg'/>
+          <!-- TABLET 12" -->
+          <source media='(max-width: 1279px)'
+                  srcset='img/background-tp.jpg'/>
+          <!-- DESKTOP -->
+          <source media='(min-width: 1280px)'
+                  srcset='img/background.jpg'/>
+          <img src="img/background.jpg" class="site-grid-header-picure-header-img" alt="">
+        </picture> 
         
       
       
@@ -57,7 +65,7 @@
         <h2 id="site-grid-portfolio-h2">Portfolio</h2>
         <div class="site-grid-portfolio-content" > 
             <div class="portfolio-content-img">
-              <a href="#">
+              <a href="portfolio/07-documasker.html">
                 <img src="img/00-index/07-documasker.png" class="portfolio-content-img-actual" alt="The Documasker Logotype">
               </a>
               <div class="portfolio-content-img-icon-container">
@@ -71,7 +79,7 @@
             </div>
     
             <div class="portfolio-content-img">
-              <a href="#">
+              <a href="portfolio/06-taxi.html">
                 <img src="img/00-index/06-taxicall.png" class="portfolio-content-img-actual" alt="3 images of using the Taxi Call app">
               </a>
               <div class="portfolio-content-img-icon-container">
@@ -85,7 +93,7 @@
             </div>
     
             <div class="portfolio-content-img">
-              <a href="#">
+              <a href="portfolio/05-serif.html">
                 <img src="img/00-index/05-serif.png" class="portfolio-content-img-actual" alt="The Serif Tryckeri Logotype">
               </a>
               <div class="portfolio-content-img-icon-container">
@@ -99,7 +107,7 @@
             </div>
     
             <div class="portfolio-content-img">
-              <a href="#">
+              <a href="portfolio/04-fellow.html">
                 <img src="img/00-index/04-fellow.png" class="portfolio-content-img-actual" alt="Prototype for the Fellow Ode Grinder Splash Page">
               </a>
               <div class="portfolio-content-img-icon-container">
@@ -116,7 +124,7 @@
             </div>
             
             <div class="portfolio-content-img">
-              <a href="#">
+              <a href="portfolio/03-ueb.html">
                 <img src="img/00-index/03-ueb.png" class="portfolio-content-img-actual" alt="Design for the Uppsala English Bookshop Mockup">
               </a>
               <div class="portfolio-content-img-icon-container">
@@ -134,7 +142,7 @@
     
     
             <div class="portfolio-content-img">
-              <a href="#">
+              <a href="portfolio/02-flashcard.html">
                 <img src="img/00-index/02-srscard.png" class="portfolio-content-img-actual" alt="3 images of using the SRS Card app">
               </a>
               <div class="portfolio-content-img-icon-container">
@@ -148,7 +156,7 @@
             </div>
     
             <div class="portfolio-content-img">
-              <a href="#">
+              <a href="portfolio/01-coffetimer.html">
                 <img src="img/00-index/01-coffecan.png" class="portfolio-content-img-actual" alt="3 images of using the Coffee Can app">
               </a>
               <div class="portfolio-content-img-icon-container">
