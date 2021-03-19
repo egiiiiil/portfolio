@@ -11,26 +11,21 @@
   <body>
     <div class="site-grid-wraper">
       <div class="site-grid-nav">
-        <button id="top-nav-menu-hamburger" class="top-nav-menu-hamburger">
+<!--         <button id="top-nav-menu-hamburger" class="top-nav-menu-hamburger">
           <svg class="top-nav-menu-hamburger-svg" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2">
             <path d="M4 6h24v2H4zM4 24h24v2H4zM4 15h24v2H4z"/>
           </svg>
-        </button>
+        </button> -->
         <nav class="top-nav">
-          <a href="#" id="top-nav-menu-home">Egil <span>J.</span> Swenning Leyser</a>
-          <div class="top-nav-menu-list">
-            
-              <a href="#site-grid-portfolio-h2" class="top-nav-menu-list-right" id="top-nav-menu-right-portfolio">Portfolio
-              </a>
-            
-            
-              <a href="#site-grid-about-content" class="top-nav-menu-list-right" id="top-nav-menu-right-about">About
-              </a>
-            
-            
-              <a href="#site-grid-contact-content" class="top-nav-menu-list-right" id="top-nav-menu-right-contact">Contact
-              </a>
-        
+          
+          <div class="top-nav-menu-list" id="myTopnav">
+            <a href="#" id="top-nav-menu-home">Egil <span>J.</span> Swenning Leyser</a>
+            <a href="#site-grid-portfolio-h2" class="top-nav-menu-list-right" id="top-nav-menu-right-portfolio">Portfolio</a>
+            <a href="#site-grid-about-content" class="top-nav-menu-list-right" id="top-nav-menu-right-about">About</a>
+            <a href="#site-grid-contact-content" class="top-nav-menu-list-right" id="top-nav-menu-right-contact">Contact</a>
+            <a href="javascript:void(0);" class="top-nav-menu-hamburger" onclick="myFunction()">
+              <i class="fas fa-bars"></i>
+            </a>
           </div>  
         </nav>
   
@@ -206,5 +201,16 @@
         <p>2021 Egil J. Swenning Leyser</p>
       </footer>
     </div>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "top-nav-menu-list") {
+          x.className += " responsive";
+        } else {
+          x.className = "top-nav-menu-list";
+        }
+      }
+      </script>
+      
   </body>
 </html>
