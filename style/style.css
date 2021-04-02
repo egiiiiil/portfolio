@@ -1,12 +1,21 @@
+:root {
+   /* COLOURS*/
+   --sitered: rgb(255, 5, 71);
+   /* FONT COLOURS*/
+   --linkred:    var(var(--sitered));
+   --linkreddark:rgb(255, 5, 80);
+   --linkgrey:   rgb(92, 92, 92);
+
+}
 @font-face {
    font-family: SFMono-Regular;
    src: local("SFMono-Regular");
  }
- @font-face {
-   font-family: 'IBM Plex Serif';
+/* @font-face {
+   font-family: "IBM Plex Serif";
    src: url(https://fonts.gstatic.com/s/ibmplexserif/v9/jizAREVNn1dOx-zrZ2X3pZvkTi2k_iI6q1vjitOh3oc.woff2) format('woff2');
    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
- }
+} */
 /* STANDARD */
 html, body {
    margin: 0;
@@ -113,7 +122,7 @@ body {
 
 /* FONTS */
 .top-nav {
-   font-family: 'IBM Plex Serif', -apple-system-ui-serif, ui-serif, serif;
+   font-family: "IBM Plex Serif", -apple-system-ui-serif, ui-serif, serif;
    font-size: 1rem;
    line-height: 1rem;
    font-weight: 700;
@@ -190,7 +199,7 @@ code {
  
 /* LINKS */
 a:link {
-   color: rgb(255, 5, 71);
+   color: var(--linkred);
    text-decoration: none;
    transition-property: color;
    transition-duration: 0,5s;
@@ -198,53 +207,53 @@ a:link {
 }
  
 a:visited {
-   color: rgb(92, 92, 92);
+   color: var(--linkgrey);
    text-decoration: none;
 }
  
 a:hover {
-   color: rgb(255, 5, 80);
+   color: var(--linkreddark);
    text-decoration: underline;
    text-decoration-thickness: 3px;
 }
  
 a:active {
-   color: rgb(255, 5, 80);
+   color: var(--linkreddark);
    text-decoration: underline;
    text-decoration-thickness: 3px;
 }
 
 /* MENU LINKS*/
 .top-nav-menu-list a:link {
-   color: rgb(255, 5, 80);
+   color: var(--linkreddark);
    text-decoration: none;
    transition-property: color;
    transition-duration: 0,5s;
 }
 .top-nav-menu-list a:visited {
-   color: rgb(255, 5, 80);
+   color: var(--linkreddark);
    text-decoration: none;
 }
 .top-nav-menu-list a:visited {
-   color: rgb(255, 5, 80);
+   color: var(--linkreddark);
    text-decoration: none;
 }
 .top-nav-menu-list a:hover {
-   color: rgb(255, 5, 80);
+   color: var(--linkreddark);
    text-decoration: underline;
    text-decoration-thickness: 3px;
 }
 .top-nav-menu-list a:hover {
-   color: rgb(255, 5, 80);
+   color: var(--linkreddark);
    text-decoration: underline;
    text-decoration-thickness: 3px;
 }
 .top-nav-menu-list a:active {
-   color: rgb(255, 5, 80);
+   color: var(--linkreddark);
    text-decoration: none;
 }
 .top-nav-menu-list-right a:active {
-   color: rgb(255, 5, 80);
+   color: var(--linkreddark);
    text-decoration: none;
 }
 
@@ -260,8 +269,8 @@ a:active {
                         'header header header'
                         '. intro .'
                         'scroll scroll scroll'
-                        '. portfolio .'
                         '. about .'
+                        '. portfolio .'
                         '. contact .'
                         '. footer footer';
    grid-template-columns:
@@ -280,8 +289,9 @@ a:active {
                            'header header header'
                            '. intro .'
                            'scroll scroll scroll'
-                           '. portfolio .'
                            '. about .'
+                           '. portfolio .'
+                           
                            '. contact .'
                            '. footer footer';
       grid-template-columns:
@@ -473,7 +483,7 @@ a:active {
 
 /* FORM */
 .site-grid-form input {
-   border: 2px solid rgb(255, 5, 71);
+   border: 2px solid var(--sitered);
    border-radius: 3px;
    width: 100%;
    height: 2.5em;
@@ -486,7 +496,7 @@ a:active {
    box-sizing: content-box;
 }
 #site-grid-form-text {
-   border: 2px solid rgb(255, 5, 71);
+   border: 2px solid var(--sitered);
    border-radius: 3px;
    width: 100%;
    height: 10em;
@@ -502,9 +512,9 @@ a:active {
    margin-top: 2em;
    height: 2.5em;
    width: 100%;
-   border: 2px solid rgb(255, 5, 71);
+   border: 2px solid var(--sitered);
    border-radius: 3px;
-   background-color: rgb(255,5,71);
+   background-color: var(--sitered);
    border: none;
    background: rgb(255,5,71);
    background: -moz-linear-gradient(133deg, rgba(255,5,71,1) 0%, rgba(255,5,80,1) 100%);

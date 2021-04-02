@@ -6,6 +6,8 @@
     <title>EJSL</title>
     <!-- <link rel="stylesheet" href="style/reset.css"> -->
     <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@700&display=swap" rel="stylesheet"> 
     <script src="https://kit.fontawesome.com/3d485ce067.js" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -31,7 +33,7 @@
         
       
       </div>
-      <div class="site-grid-scroll">
+      <div class="site-grid-scroll" >
         <div class="site-grid-scroll-img">
           <picture>
             <source type="image/svg+xml" srcset="img/scroll.svg" id="site-grid-scroll-img-svg">
@@ -39,13 +41,18 @@
           </picture>
         </div>
       </div>
-      <div class="site-grid-intro">
+      <div class="site-grid-intro" role="complementary">
         <div id="intro-div">
           <p id="intro-text">Intro text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt arcu ipsum, a lacinia orci sollicitudin sit amet.
           </p>
         </div>
       </div>
-      <div class="site-grid-portfolio">
+      <main class="site-grid-about">
+        <!--<h1>About</h1>-->
+        <h1 id="site-grid-about-content">About</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie ligula nec velit laoreet, sed dapibus lorem euismod. Duis aliquet congue augue at lacinia. Pellentesque imperdiet lectus eu velit convallis, eget finibus nisl pharetra. Nullam auctor risus in dui pulvinar, vel malesuada quam porttitor. Suspendisse vitae ultrices sapien, vitae vestibulum lacus. Sed quis risus mollis, sagittis dui ut, accumsan sem. Nullam maximus dui eget dapibus tristique. Pellentesque ac ligula mauris. Etiam quis leo vel nisi fringilla aliquam quis in turpis. Suspendisse commodo sit amet lorem nec consectetur. Phasellus sed odio condimentum, placerat leo eget, cursus nulla. Proin hendrerit velit sit amet lorem sodales tempus. Duis consectetur lorem sed lectus lobortis, eget fringilla orci dignissim. Vivamus ut consectetur lectus.</p>
+      </main>
+      <article class="site-grid-portfolio">
         <h1 id="site-grid-portfolio-h1">Portfolio</h1>
         <div class="site-grid-portfolio-content" > 
             <div class="portfolio-content-img">
@@ -153,18 +160,8 @@
               </div>
             </div>
           </div>
-      </div>
-      
-
-
-
-
-      <div class="site-grid-about">
-        <!--<h1>About</h1>-->
-        <h1 id="site-grid-about-content">About</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie ligula nec velit laoreet, sed dapibus lorem euismod. Duis aliquet congue augue at lacinia. Pellentesque imperdiet lectus eu velit convallis, eget finibus nisl pharetra. Nullam auctor risus in dui pulvinar, vel malesuada quam porttitor. Suspendisse vitae ultrices sapien, vitae vestibulum lacus. Sed quis risus mollis, sagittis dui ut, accumsan sem. Nullam maximus dui eget dapibus tristique. Pellentesque ac ligula mauris. Etiam quis leo vel nisi fringilla aliquam quis in turpis. Suspendisse commodo sit amet lorem nec consectetur. Phasellus sed odio condimentum, placerat leo eget, cursus nulla. Proin hendrerit velit sit amet lorem sodales tempus. Duis consectetur lorem sed lectus lobortis, eget fringilla orci dignissim. Vivamus ut consectetur lectus.</p>
-      </div>
-      <div class="site-grid-contact">
+      </article>
+      <article class="site-grid-contact">
         <!--<h1>Contact</h1> -->
         <h1 id="site-grid-contact-content">Contact</h1>
         <p>Find me at <a href="https://twitter.com/____egil/">Twitter</a>, or send me a mail:</p>
@@ -191,7 +188,7 @@
                 required></textarea>
         <button id="site-grid-form-button">Send</button>
       </form>
-      </div>
+      </article>
       <footer class="site-grid-footer">
         <p>2021 Egil J. Swenning Leyser</p>
       </footer>
