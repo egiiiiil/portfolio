@@ -1,0 +1,148 @@
+@import 'variable.scss';
+@import 'font.scss';
+@import 'grid.scss';
+/* Applies to the entire body of the HTML document (except where overridden by more specific
+selectors). */
+
+body,html {
+	min-height: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+html {
+	font-size: 20px;
+	line-height: 34px;
+}
+
+body {
+	background-color: $white-color;
+}
+body.dark {
+	background-color: $black-color;
+}
+
+.site-grid-nav {
+	width: 100%;
+	height: min-content;
+	background-color: rgb(211, 211, 211);
+	background: linear-gradient(180deg, rgba(211,211,211,1) 0%, rgba(211,211,211,0) 80%);
+		.nav__ul--large {
+			display: block;
+		}
+		.nav__ul--small {
+			display: none;
+		}
+	@media screen and (max-width: 481px) {
+		.nav__ul--large {
+			display: none;
+		}
+		.nav__ul--small {
+			display: block;
+		}
+	}
+	.site-grid-nav__ul {
+		padding: 0;
+		margin: 0;
+		display: flex;
+		justify-content: flex-end;
+
+		li:first-child {
+			align-self: flex-start;
+			flex-grow: 1;
+		}
+	}
+	#site-grid-nav__darkmode-button {
+		width: 2em;
+		background-color: transparent;
+		border-radius: 1em;
+		height: 2em;
+		border: $accent-color solid 3px;
+		text-align: center;
+	}
+	body.dark #site-grid-nav__darkmode-button {
+		border: $accent-color-dark solid 3px;
+	}
+}
+body.dark .site-grid-nav {
+	background: linear-gradient(180deg, rgb(70, 70, 70) 0%, rgba(211,211,211,0) 80%);;
+}
+
+.site-grid-above-fold-image {
+
+	.above-fold-image__image-element {
+	width: 100%;
+	height: auto;
+	}
+}
+.site-grid-above-fold-text {
+	
+	display: flex;
+  flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	.above-fold-text__text {
+		max-width: 37ch;
+		background: linear-gradient(158deg, rgba(251,0,0,1) 0%, rgba(0,76,255,1) 100%);
+		-webkit-text-fill-color: transparent;
+		-webkit-background-clip: text;
+		background-clip: text;
+		justify-content: space-around;
+	}
+	body.dark .above-fold-text__text {
+		color: $white-color;
+	}
+}
+.site-grid-main {
+	.main__card {
+		display: flex;
+		flex-wrap: wrap;
+		.card__whole {
+/* 			width: 50%; */
+			
+			.card__img {
+				width: 100%;
+				margin: 0;
+				padding: 0;
+			}
+
+		}
+	}
+}
+.footer__big-box {
+	background-color: #fff;
+	color: $black-color;
+	border-radius: 1em;
+	margin: 1em;
+	max-width: 100%;
+	height: 20em;
+	display: flex;
+	justify-content: space-between;
+	@media screen and (max-width: 481px) {
+		flex-direction: column;
+	}
+	.big-box__large {
+		flex-grow: 2;
+	}
+	.big-box__small {
+		flex-grow: 1;
+	}
+}
+.footer__bottom {
+	/* background-color: #ff69b4; */
+	margin: 1em;
+	max-width: 100%;
+	height: 20em;
+	border-radius: 0;
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+	
+}
+.site-grid-footer-image {
+	max-width: 100%;
+/* 	z-index: 1; */
+	.site-grid-footer-image__image-element {
+		width: 100%;
+	}
+}
