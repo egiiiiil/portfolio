@@ -1,37 +1,103 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		
+		<meta charset="utf-8">
+
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="./styles/style.css">
+		
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&family=Playfair+Display:wght@900&family=Sora:wght@800&display=swap" rel="stylesheet">
+		<title>Home | Egil J. Swenning Leyser</title>
+
+
+		<meta name="description" content="Portfolio for Egil J. Swenning Leyser, a frontend developer from Uppsala, Sweden">
+		<!-- OG tags -->
+		<meta property="og:title" content="Home | Egil J. Swenning Leyser">
+		<meta property="og:description" content="Portfolio for Egil J. Swenning Leyser, a frontend developer from Uppsala, Sweden">
+		<!-- <meta property="og:image" content="https://www.mywebsite.com/image.jpg"> -->
+		<meta property="og:image:alt" content="Logo for Egil J. Swenning Leyser">
+		<meta property="og:locale" content="en_GB">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://www.egiljswenningleyser.com/page">
+
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@egiiiiil">
+		<meta name="twitter:creator" content="@egiiiiil">
+		<meta name="twitter:title" content="Portfolio for Egil J. Swenning Leyser">
+		<meta name="twitter:description" content="Portfolio for Egil J. Swenning Leyser, a frontend developer from Uppsala, Sweden">
+		<!-- <meta name="twitter:image" content="http://graphics8.nytimes.com/images/2012/02/19/us/19whitney-span/19whitney-span-articleLarge.jpg"> -->
+
+
+		<link rel="canonical" href="https://www.egiljswenningleyser.com/page">
+
+		<link rel="icon" href="image/favicon/favicon.ico">
+		<link rel="icon" href="image/favicon/favicon.svg" type="image/svg+xml">
+		<link rel="apple-touch-icon" href="image/favicon/apple-touch-icon.png">
+		<link rel="manifest" href="manifest.webmanifest">
+
+
+
+		<meta name="theme-color" content="#c43939" media="(prefers-color-scheme: dark)">
+		<meta name="theme-color" content="#ff494a" media="(prefers-color-scheme: light)">
+
+
+
+
+
 	</head>
-	<body>
+	<body class="toggle-me" onload="getPost()">
 		<div class="site-grid-container">
-			<nav>
-				<ul class="site-grid-nav">
-					<li><a href="./index.html">Home</a></li>
-					<li><a href="./contact.html">Contact</a></li>
+			<nav class="site-grid-nav">
+				<ul class="site-grid-nav__ul">
+					<li class="nav__ul--large"><a href="./index.html" class="nav__name">Egil <span class="nav__name--span">J.</span> Swenning Leyser</a></li>
+					<li><a href="pages/contact.html" class="nav__item">Contact</a></li>
+					<li><a href="pages/contact.html" class="nav__item">About Me</a></li>
 					<li>
-						<button class=".button-darkmode-toggle" onclick="toggleState()">
-							Click me to change style
-						 </button>
+						<button id="site-grid-nav__darkmode-button" onclick="toggleState()">
+							☀
+						</button>
 					</li>
 				</ul>
 				
 			</nav>
-			<main>
-				<h1>Home</h1>
-				<h2>Lorem ipsum</h2>
-				<h3>Lorem ipsum</h3>
-				<h4>Lorem ipsum</h4>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in erat dolor. Nullam id enim et lectus commodo venenatis in nec eros. In hac habitasse platea dictumst. Curabitur bibendum elit eu tellus egestas fringilla. Quisque vestibulum lorem sed risus feugiat, vel venenatis tortor imperdiet. Ut tincidunt maximus vehicula. Sed imperdiet libero ac elit consectetur dignissim. Fusce elementum porttitor libero. Quisque dui leo, efficitur ac lacus ac, ultrices consectetur dolor.
-				</p>
-				<a href="./pages/post.html">To post</a>
+<!-- 			<div class="site-grid-above-fold-image">
+				<img src="image/above-fold-image.png" alt="" class="above-fold-image__image-element" aria-hidden="true"/>
+			</div> -->
+			<div class="site-grid-above-fold-text">
+					<p class="above-fold-text__text">
+						Frontend, UX, and UI from <wbr>Uppsala, Sweden.
+					</p>
+			</div>
+			<main class="site-grid-main">
+				<h2>Example work</h2>
+				<p class="main__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				<div class="main__card">
+				</div>
 			</main>
+			
+			<footer class="site-grid-footer">
+				<div class="footer__big-box">
+						<div class="big-box__large"><p>a</p></div>
+						<div class="big-box__small"><p>b</p></div>
+						<div class="big-box__small"><p>c</p></div>
+
+				</div>
+				<div class="footer__bottom">
+						<p>&copy; Egil J. Swenning Leyser</p>
+				</div>
+				
+				<div class="site-grid-footer-image">
+					<img src="image/footer-image.png" alt="" class="site-grid-footer-image__image-element" aria-hidden="true"/>
+				</div>
+			</footer>
 		</div>
-		<script src="script.js"></script>
+		<script src="scripts/dark-mode-button.js"></script>
+		<script src="scripts/fetch-post.js"></script>
+		<script src="scripts/body-on-load.js"></script>
+
+		
 	</body>
 </html>
