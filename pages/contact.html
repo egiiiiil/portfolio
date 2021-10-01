@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		
 		<meta charset="utf-8">
@@ -33,55 +33,77 @@
 
 		<meta name="theme-color" content="#c43939" media="(prefers-color-scheme: dark)">
 		<meta name="theme-color" content="#ff494a" media="(prefers-color-scheme: light)">
-
+		<script src="https://kit.fontawesome.com/3d485ce067.js" crossorigin="anonymous"></script>
 
 
 
 		<meta name="theme-color" content="#FF00FF">
 	</head>
-	<body class="toggle-me" onload="bodyOnLoad()">
+	<body class="toggle-me" onload="contactOnLoad()">
 	<div class="site-grid-container">
 		<nav class="site-grid-nav">
 			<ul class="site-grid-nav__ul">
-				<li class="nav__ul--large"><a href="../index.html" class="nav__name">Egil <span class="nav__name--span">J.</span> Swenning Leyser</a></li>
-				<li class="nav__ul--small"><a href="../index.html" class="nav__name--small"><img src="image/nav-icon.png"></li>
-				<li><a href="../pages/contact.html" class="nav__item">Contact</a></li>
+				<li class="nav__ul">
+					<a href="../index.html" class="nav__name" aria-label="Home">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 53 54" id="nav__name--shield">
+							<path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" stroke-width="7" d="M38.4129 4s-.3185 7.829 7.891 7.829C54.5135 11.829 42.8198 50 26.7941 50h-.5883C10.1801 50-1.51332 11.829 6.69599 11.829 14.9055 11.829 14.587 4 14.587 4h23.8259Z" clip-rule="evenodd"/>
+						</svg>
+						<span id="nav__name--egil">Egil J. Swenning Leyser</span>							
+					</a>
+				</li>
+				<li><a href="contact.html" class="nav__item">Contact</a></li>
+				<li><a href="about.html" class="nav__item">About Me</a></li>
 				<li>
 					<button id="site-grid-nav__darkmode-button" onclick="toggleState()">
 						☀
 					</button>
 				</li>
 			</ul>
+			
 		</nav>
 		<main class="site-grid-main">
-			<h2>Contact</h2>
+			<h1>Contact</h1>
 			<div class="contact__card">
-				<p>Egil J. Swenning Leyser</p>
-				<p>Twitter, Facebook</p>
-			</div>
-			<div class="main__card">
+				<p class="main__p">You can contact me here:</p>
+				<ul>
+					<li class="twitter">@egiiiiil</li>
+					<li class="mail">hello@egiljswenning<wbr>leyser.se</li>
+					<li class="github">egiiiiil</li>
+				</ul>
 			</div>
 		</main>
 		
 		<footer class="site-grid-footer">
+			<div class="footer__end"></div>
 			<div class="footer__big-box">
-					<div class="big-box__large"><p>a</p></div>
-					<div class="big-box__small"><p>b</p></div>
-					<div class="big-box__small"><p>c</p></div>
+					<div class="big-box__large">
+						
+						<form class="footer__form">
+							<label for="senderName">Name</label>
+							<input id="senderName" type="text">
+							<label for="senderText">Message</label>
+							<textarea id="senderText"></textarea>
+							<button>Send <i class="far fa-paper-plane"></i></button>
+						</form>
+					</div>
+					<div class="big-box__small">
+						<ul>
+							<li class="twitter">@egiiiiil</li>
+							<li class="mail">hello@egiljswenning<wbr>leyser.se</li>
+							<li class="github">egiiiiil</li>
+						</ul>
+					</div>
 
 			</div>
 			<div class="footer__bottom">
-					<p>&copy; Egil J. Swenning Leyser</p>
-			</div>
-			
-			<div class="site-grid-footer-image">
-				<img src="../image/footer-image.png" alt="" class="site-grid-footer-image__image-element" aria-hidden="true"/>
+					<p>&copy; Egil J. Swenning <wbr>Leyser</p>
 			</div>
 		</footer>
 	</div>
 	<script src="../scripts/dark-mode-button.js"></script>
 	<script src="../scripts/fetch-post.js"></script>
-	<script src="../scripts/body-on-load.js"></script>
+	<script src="../scripts/contact-on-load.js"></script>
+
 
 	
 </body>
