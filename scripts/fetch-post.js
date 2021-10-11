@@ -17,7 +17,6 @@ function formatPost(post) {
 		title: post.title.rendered,
 		previewImage: post._embedded['wp:featuredmedia'][0].source_url,
 		previewImageAlt: post._embedded['wp:featuredmedia'][0].alt_text,
-		/* shortSummary: post.excerpt.rendered, */
 		content: post.content.rendered
 	}
 	return formated;
@@ -33,7 +32,7 @@ function createThumnail(post) {
 			<img class="card__img" src="${post.previewImage}" alt="${post.previewImageAlt}">
 			
 			<p>
-				<a class="card__p card__link" href="./pages/post.html?id=${post.id}">To post</a>
+				<a class="card__p card__link" href="./pages/post.html?id=${post.id}">To ${post.title}</a>
 			</p>
 	</li>`;
 }
@@ -60,7 +59,7 @@ function getPostFromId() {
 		.then((data) => {
 			let post = formatPost(data);
 			postContent.innerHTML = 
-					`<h2>${post.title}</h2>
+					`<h1>${post.title}</h1>
 					 ${post.content}`
 		})
 }

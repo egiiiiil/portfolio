@@ -1,12 +1,71 @@
 /* Fonts */
+@font-face {
+  font-family: 'Sora';
+  src: url(../font/Sora-VariableFont_wght.ttf);
+	font-weight: 800;
+}
 body {
 	font-family: arial, sans-serif;
 	font-size: 20px;
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
+
+
+
+
+
+
+
+a {
+	transition-property: text-decoration;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
+	&:link {
+		text-decoration: underline;
+		text-decoration-thickness: 3px;
+		text-underline-offset: 5px; 
+		color: $black-color;
+	}
+	&:visited {
+		text-decoration-thickness: 3px;
+		text-underline-offset: 5px; 
+		color: $black-color;
+	}
+	&:hover {
+		text-decoration: underline;
+		text-decoration-color: $accent-color;
+		text-decoration-thickness: 3px;
+		text-underline-offset: 5px; 
+	}
+	&:active {
+		text-decoration: underline;
+		text-decoration-color: $accent-color-dark;
+		text-decoration-thickness: 3px;
+		text-underline-offset: 5px;
+	}
+}
+body.dark a {
+	&:link {
+		color: $white-color;
+	}
+	&:visited {
+		color: $white-color;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
 .site-grid-nav__ul {
 	list-style: none;
-	font-family: 'Sora', sans-serif;
+	font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 	li {
 		display: inline;
 		font-weight: 800;
@@ -24,50 +83,44 @@ body {
 			padding: 0;
 		}
 		a {
-			transition-property: text-decoration;
-			transition-duration: 0.2s;
-			transition-timing-function: ease-in-out;
+			text-decoration: none;
 			&:link {
 				text-decoration: none;
 				color: $black-color;
 			}
 			&:visited {
 				color: $black-color;
+				text-decoration: none;
 			}
 			&:hover {
-				text-decoration: underline;
-				text-decoration-color: $black-color;
-				text-decoration-thickness: 3px;
-				text-underline-offset: 5px; 
+				text-decoration: none;
 			}
 			&:active {
-				text-decoration: underline;
-				text-decoration-color: $black-color;
-				text-decoration-thickness: 3px;
-				text-underline-offset: 5px;
-			 }
+				text-decoration: none;
+			}
 		}
 	}
 }
-body.dark a {
-	&:link {
-		text-decoration: none;
-		color: $white-color;
-	}
-	&:visited {
-		color: $white-color;
-	}
-	&:hover {
-		text-decoration: underline;
-		text-decoration-color: $white-color;
-		text-decoration-thickness: 3px;
-		text-underline-offset: 5px; 
-	}
-	&:active {
-		text-decoration: underline;
-		text-decoration-color: $white-color;
-		text-decoration-thickness: 3px;
-		text-underline-offset: 5px;
+
+body.dark .site-grid-nav__ul {
+	li {
+		a {
+			text-decoration: none;
+			&:link {
+				text-decoration: none;
+				color: $white-color;
+			}
+			&:visited {
+				color: $white-color;
+				text-decoration: none;
+			}
+			&:hover {
+				text-decoration: none;
+			}
+			&:active {
+				text-decoration: none;
+			}
+		}
 	}
 }
 
@@ -119,31 +172,31 @@ body.dark a {
 
 h1 {
 	font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-	font-size: 2rem;
-	line-height: 1.538em;
+	font-size: 2.05rem;
+	line-height: 1.561rem;
 	color: $black-color;
 }
 body.dark h1 { color: $white-color; }
 h2 {
 	font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-	font-size: 2rem;
-	line-height: 1.561rem;
+	font-size: 1.6rem;
+	line-height: 1.594rem;
 	color: $black-color;
 }
 body.dark h2 { color: $white-color; }
 h3 {
 	font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-	font-size: 1.2rem;
-	line-height: 1.594rem;
-	color: $black-color;
-}
-body.dark h3 { color: $white-color; }
-h4 {
-	font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-
+	font-size: 1.25rem;
 	line-height: 1.64rem;
 	color: $black-color;
 }
+body.dark h3 { color: $white-color; }
+/* h4 {
+	font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+	font-size: 1rem;
+	line-height: 1.7rem;
+	color: $black-color;
+} */
 body.dark h4 { color: $white-color; }
 p {
 /* 	font-size: 1rem; */
@@ -160,67 +213,46 @@ code {
 }
 
 .site-grid-main {
-	.main__p {
+	p {
 		letter-spacing: 0.08em;
 		font-size: 1rem;
 	}
-	ul {
+	ul, ol {
 		padding-left: 0;
 		li {
 			letter-spacing: 0.08em;
 			font-size: 1rem;
-			color: $white-color;
-			list-style: none;
+			color: $black-color;
+			i {
+				margin-right: 1em;
+				font-size: 1.2em;
+			}
+		}
+	}
+	.twitter-list, .github-list, .mail-list {
+		list-style-type: none;
+	}
+	@media screen and (max-width: 481px) {
+		.main__ul {
+			li {
+				margin-left: 1em;
+			}
 		}
 	}
 	.main__card {
 		.card__h3, .card__p {
 			padding-left: 0.25em;
 		}
-		.card__whole {
-			a {
-				transition-property: text-decoration;
-				transition-duration: 0.2s;
-				transition-timing-function: ease-in-out;
-				&:link {
-					text-decoration: underline;
-					text-decoration-thickness: 3px;
-					text-underline-offset: 5px; 
-					color: $black-color;
-				}
-				&:visited {
-					text-decoration-thickness: 3px;
-					text-underline-offset: 5px; 
-					color: $black-color;
-				}
-				&:hover {
-					text-decoration: underline;
-					text-decoration-color: $accent-color;
-					text-decoration-thickness: 3px;
-					text-underline-offset: 5px; 
-				}
-				&:active {
-					text-decoration: underline;
-					text-decoration-color: $accent-color-dark;
-					text-decoration-thickness: 3px;
-					text-underline-offset: 5px;
-				}
-			}
-		}
 	}
 }
-body.dark .site-grid-main {
-	.main__card {
-		.card__whole {
-			a {
-				&:link {
-					color: $white-color;
-				}
-				&:visited {
-					color: $white-color;
-				}
-			}
-		}
+body.dark ul {
+	li {
+		color: $white-color;
+	}
+}
+body.dark ol {
+	li {
+		color: $white-color;
 	}
 }
 .site-grid-footer {
@@ -236,15 +268,36 @@ body.dark .site-grid-main {
 				padding: 0.5em;
 				letter-spacing: 0.08em;
 				font-size: 1rem;
+				font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
 			}
 			textarea {
 				padding: 0.5em;
 				letter-spacing: 0.08em;
 				font-size: 1rem;
+				font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 			}
 			button {
 				letter-spacing: 0.08em;
 				font-size: 1rem;
+			}
+			.validation__check {
+				color: $white-color;
+				font-size: 1.2em;
+				font-weight: 800;
+			}
+		}
+	}
+	.big-box__small {
+			
+		ul {
+			padding-left: 0;
+			li {
+				list-style: none;
+				i {
+					margin-right: 1em;
+					font-size: 1.2em;
+				}
 			}
 		}
 	}

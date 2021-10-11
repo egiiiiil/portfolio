@@ -1,8 +1,8 @@
 @import 'variable.scss';
 @import 'font.scss';
 @import 'grid.scss';
-/* Applies to the entire body of the HTML document (except where overridden by more specific
-selectors). */
+@import 'otherpages.scss';
+
 :root {
 	accent-color: $accent-color;
 }
@@ -104,7 +104,7 @@ body.dark .site-grid-nav {
 	justify-content: space-around;
 	align-items: center;
 	.above-fold-text__text {
-		background: linear-gradient(158deg, $accent-color, $accent-color-blue);
+		background: linear-gradient(165deg, #ff494a, #fe38b5, #c427fd, #2f16fb, #0584fa);
 		background-size: 400% 400%;
 		animation: text-gradient 15s ease infinite;
 		-webkit-text-fill-color: transparent;
@@ -122,7 +122,7 @@ body.dark .site-grid-nav {
 @media (prefers-reduced-motion) {
 	.site-grid-above-fold-text {
 		.above-fold-text__text {
-			background: linear-gradient(158deg, $accent-color, $accent-color-blue);
+			background: linear-gradient(165deg, #ff494a, #fe38b5, #c427fd, #2f16fb, #0584fa);
 			background-size: 100% 100%;
 			-webkit-text-fill-color: transparent;
 			-webkit-background-clip: text;
@@ -131,6 +131,7 @@ body.dark .site-grid-nav {
 		}
 	}
 }
+
 .site-grid-main {
 	.main__card {
 		li {
@@ -155,7 +156,7 @@ body.dark .site-grid-nav {
 	@media screen and (max-width: 481px) {
 		.main__card {
 			.card__whole {
-				width: 100%; /* a */
+				width: 100%;
 			}
 		}
 	}
@@ -191,117 +192,130 @@ body.dark .site-grid-main {
 		max-width: 100%;
 		height: 20em;
 		display: flex;
+		gap: 3em;
 		justify-content: space-between;
 		padding-left: 1em;
 		padding-right: 1em;
-		.footer__form {
-			box-sizing: border-box;
-			width: 70%;
-			input {
-				width: 100%;
-				height: 2em;
-				box-sizing: border-box;
-				border: 2px solid $accent-color;
-				border-radius: 0.5em;
-			}
-			textarea {
-				width: 100%;
-				resize: none;
-				height: 4em;
-				box-sizing: border-box;
-				border: 2px solid $accent-color;
-				border-radius: 0.5em;
-			}
-			input:focus, textarea:focus, button:focus {
-				outline: 2px solid $accent-color;
-				
-			}
-			button {
-				width: 100%;
-				height: 2.5em;
-				box-sizing: border-box;
-				background-color: $accent-color;
-				margin-left: 0;
-				margin-right: 0;
-				border-radius: 0.5em;
-				border: none;
-				
-				transition-property: transform, background;
-				transition-duration: 0.2s;
-				transition-timing-function: ease-in-out;
-			}
-			button:active {
-				background: radial-gradient(circle, rgba(227,0,45,1) 0%, rgba(250,5,54,1) 100%);
-				box-shadow: 0px 3px 25px -8px rgba(0,0,0,0.75);
-				transform: translateY(4px);
-			}
-		}
 		.big-box__large {
-			flex-grow: 2;
-		}
-		.big-box__small {
-			flex-grow: 1;
-			ul {
-				li#github::marker  {
-					content: '\f09b';
-					font-family: 'Font Awesome 5 Free';
-				}
-				li#twitter::marker{
-					content: '\f099';
-					font-family: 'Font Awesome 5 Free';
-				}
-				li#mail::marker {
-					content: '\f0e0';
-					font-family: 'Font Awesome 5 Free';
-				}
-			}
-		}
-	}
-	@media screen and (max-width: 481px) {
-		.footer__big-box {
-			flex-direction: column;
-			height: auto;
+			width: 60%;
 			.footer__form {
 				box-sizing: border-box;
-				width: 90%;
+				width: 100%;
+				#senderName, #senderText, #senderButton {
+					width: 50vw;
+				}
+				input {
+					height: 3em;
+					box-sizing: border-box;
+					border: 2px solid $accent-color;
+					border-radius: 0.5em;
+				}
+				textarea {
+					resize: none;
+					height: 6em;
+					box-sizing: border-box;
+					border: 2px solid $accent-color;
+					border-radius: 0.5em;
+				}
+				input:focus, textarea:focus, button:focus {
+					outline: 2px solid $accent-color;
+					
+				}
+				button {
+					height: 2.5em;
+					box-sizing: border-box;
+					background-color: $accent-color;
+					margin-top: 0.5em;
+					margin-left: 0;
+					margin-right: 0;
+					border-radius: 0.5em;
+					border: none;
+					
+					transition-property: transform, background;
+					transition-duration: 0.2s;
+					transition-timing-function: ease-in-out;
+				}
+				button:active {
+					background: radial-gradient(circle, rgba(227,0,45,1) 0%, rgba(250,5,54,1) 100%);
+					box-shadow: 0px 3px 25px -8px rgba(0,0,0,0.75);
+					transform: translateY(4px);
+				}
+				.form__input-validation {
+					display: flex;
+					align-items: flex-start;
+					.validation__check {
+						margin-left: 1em;
+						opacity: 0;
+						transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1)
+					}
+					input:valid + .validation__check {
+						/* #3 - Animate the validation icon */
+						 opacity: 1;
+					}
+					textarea:valid + .validation__check {
+						/* #3 - Animate the validation icon */
+						 opacity: 1;
+					}
+				}
+			}
 		}
-		.big-box__large {
-			flex-grow: 1;
-		}
+		
 		.big-box__small {
-			flex-grow: 1;
+			max-width: 21em;
 		}
+		
 	}
+	@media screen and (max-width: 656px) {
+		.footer__big-box {
+			flex-direction: column;
+			height:					auto;
+			.big-box__large {
+				width: 100%;
+				.footer__form {
+					box-sizing:		border-box;
+					#senderName, #senderText, #senderButton {
+						width: 80vw;
+					}
+			}
+		}
+
+			.big-box__small {
+				width: 100%;
+			}
+		}
+	
 }
+
 @media screen and (max-width: 812px) and (orientation: landscape) {
 	.footer__big-box {
-		margin-left: 2%;
-		margin-left: clamp(2%, 2% + env(safe-area-inset-left), 2em);
-		margin-right: 2%;
-		margin-right: clamp(2%, 2% + env(safe-area-inset-left), 2em);
+		margin-left:			2%;
+		margin-left:			clamp(2%, 2% + env(safe-area-inset-left), 2em);
+		margin-right:			2%;
+		margin-right:			clamp(2%, 2% + env(safe-area-inset-left), 2em);
 	}
 }
 	.footer__bottom {
 		/* background-color: #ff69b4; */
-		margin: 1em;
-		margin-left: 2%;
-		margin-left: clamp(2%, 2% + env(safe-area-inset-left), 2em);
-		margin-right: 2%;
-		margin-right: clamp(2%, 2% + env(safe-area-inset-left), 2em);
-		max-width: 100%;
-		height: 8em;
-		border-radius: 0;
-		display: flex;
-		align-items: flex-end;
-		justify-content: flex-end;
+		margin:						1em;
+		margin-left:			2%;
+		margin-left:			clamp(2%, 2% + env(safe-area-inset-left), 2em);
+		margin-right:			2%;
+		margin-right:			clamp(2%, 2% + env(safe-area-inset-left), 2em);
+		max-width:				100%;
+		height:						8em;
+		border-radius:		0;
+		display:					flex;
+		align-items:			flex-end;
+		justify-content:	flex-end;
 	}
 }
 /* @media screen and (max-width: 481px;) {
 	
 } */
 body.dark .footer__end {
-	background-color: $black-color;
+	background-color:		$black-color;
 }
 body.dark .footer__big-box {
-	background-color: $black-color;
+	background-color: 	$black-color;
 }
+
