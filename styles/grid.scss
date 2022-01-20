@@ -8,6 +8,12 @@
 		grid-template-columns: auto 95% auto;
 	}
 }
+@media screen and (max-width: 320px) {
+	.site-grid-container {
+		grid-template-columns: auto 95% auto;
+	}
+}
+
 
 
 .site-grid-nav {
@@ -43,7 +49,7 @@
 }
 .site-grid-footer {
 	grid-column: 1 / 4;
-/* 	background-color: green; */
+
 	display: flex;
 	flex-direction: column;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 	<head>
 		
 		<meta charset="utf-8">
@@ -25,7 +25,7 @@
 		<link rel="canonical" href="https://www.egiljswenningleyser.com/page">
 
 		<link rel="icon" href="../image/favicon/favicon.ico">
-		<link rel="icon" href="../image/favicon/favicon.svg" type="image/svg+xml">
+		<link rel="icon" href="../image/favicon/favicon.ico" type="image/svg+xml">
 		<link rel="apple-touch-icon" href="../image/favicon/apple-touch-icon.png">
 		<link rel="manifest" href="../manifest.webmanifest">
 
@@ -39,7 +39,7 @@
 
 		<meta name="theme-color" content="#FF00FF">
 	</head>
-	<body class="toggle-me" onload="postOnLoad()">
+	<body class="toggle-me" onload="contactOnLoad()">
 	<div class="site-grid-container">
 		<nav class="site-grid-nav">
 			<ul class="site-grid-nav__ul">
@@ -59,11 +59,14 @@
 					</button>
 				</li>
 			</ul>
+			
 		</nav>
 		<main class="site-grid-main">
-			<article class="post__content">
-				<h2>Portfolio</h2>
-			</article>
+			<h2>About</h2>
+			<div class="about">
+				<p class="main__p">My name is Egil J. Swenning Leyser from Uppsala, Sweden.</p>
+			</div>
+			<div class="side-image"></div>
 		</main>
 		
 		<footer class="site-grid-footer">
@@ -80,14 +83,11 @@
 						</form>
 					</div>
 					<div class="big-box__small">
-						<dl>
-							<dt>T:</dt>
-							<dd><span>@</span>egiiiiil</dd>
-							<dt>M:</dt>
-							<dd>hello@egiljswenning<wbr>leyser.se</dd>
-							<dt>G:</dt>
-							<dd>egiiiiil</dd>
-						</dl>
+						<ul>
+							<li class="twitter">@egiiiiil</li>
+							<li class="mail">hello@egiljswenning<wbr>leyser.se</li>
+							<li class="github">egiiiiil</li>
+						</ul>
 					</div>
 
 			</div>
@@ -98,7 +98,8 @@
 	</div>
 	<script src="../scripts/dark-mode-button.js"></script>
 	<script src="../scripts/fetch-post.js"></script>
-	<script src="../scripts/post-on-load.js"></script>
+	<script src="../scripts/contact-on-load.js"></script>
+
 
 	
 </body>

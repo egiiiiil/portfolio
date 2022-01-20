@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		
 		<meta charset="utf-8">
 
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 		<link rel="stylesheet" href="./styles/style.css">
 		
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,19 +42,26 @@
 
 		<meta name="theme-color" content="#c43939" media="(prefers-color-scheme: dark)">
 		<meta name="theme-color" content="#ff494a" media="(prefers-color-scheme: light)">
-
+		<script src="https://kit.fontawesome.com/3d485ce067.js" crossorigin="anonymous"></script>
 
 
 
 
 	</head>
-	<body class="toggle-me" onload="getPost()">
+	<body class="toggle-me" onload="bodyOnLoad()">
 		<div class="site-grid-container">
 			<nav class="site-grid-nav">
 				<ul class="site-grid-nav__ul">
-					<li class="nav__ul--large"><a href="./index.html" class="nav__name">Egil <span class="nav__name--span">J.</span> Swenning Leyser</a></li>
+					<li class="nav__ul">
+						<a href="./index.html" class="nav__name" aria-label="Home">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 53 54" id="nav__name--shield">
+								<path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" stroke-width="6" d="M38.4129 4s-.3185 7.829 7.891 7.829C54.5135 11.829 42.8198 50 26.7941 50h-.5883C10.1801 50-1.51332 11.829 6.69599 11.829 14.9055 11.829 14.587 4 14.587 4h23.8259Z" clip-rule="evenodd"/>
+							</svg>
+							<span id="nav__name--egil">Egil J. Swenning Leyser</span>							
+						</a>
+					</li>
 					<li><a href="pages/contact.html" class="nav__item">Contact</a></li>
-					<li><a href="pages/contact.html" class="nav__item">About Me</a></li>
+					<li><a href="pages/about.html" class="nav__item">About Me</a></li>
 					<li>
 						<button id="site-grid-nav__darkmode-button" onclick="toggleState()">
 							☀
@@ -63,34 +70,43 @@
 				</ul>
 				
 			</nav>
-<!-- 			<div class="site-grid-above-fold-image">
-				<img src="image/above-fold-image.png" alt="" class="above-fold-image__image-element" aria-hidden="true"/>
-			</div> -->
-			<div class="site-grid-above-fold-text">
+			<aside class="site-grid-above-fold-text">
 					<p class="above-fold-text__text">
 						Frontend, UX, and UI from <wbr>Uppsala, Sweden.
 					</p>
-			</div>
+			</aside>
 			<main class="site-grid-main">
-				<h2>Example work</h2>
+				<h1>Example work</h1>
 				<p class="main__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-				<div class="main__card">
-				</div>
+				<ul class="main__card">
+					<!-- <li style="background-color: blue;"></li> -->
+				</ul>
 			</main>
 			
 			<footer class="site-grid-footer">
+				<div class="footer__end" aria-hidden="true"></div>
 				<div class="footer__big-box">
-						<div class="big-box__large"><p>a</p></div>
-						<div class="big-box__small"><p>b</p></div>
-						<div class="big-box__small"><p>c</p></div>
+						<div class="big-box__large">
+							
+							<form class="footer__form">
+								<label for="senderName">Name</label>
+								<input id="senderName" type="text">
+								<label for="senderText">Message</label>
+								<textarea id="senderText"></textarea>
+								<button>Send <i class="far fa-paper-plane"></i></button>
+							</form>
+						</div>
+						<div class="big-box__small">
+							<ul>
+								<li id="twitter"><a href="#">@egiiiiil</a></li>
+								<li id="github"><a href="https://github.com/egiiiiil">egiiiiil</a></li>
+								<li id="mail"><a href="mailto:hello@egiljswenningleyser.se">hello@egiljswenning<wbr>leyser.se</a></li>
+							</ul>
+						</div>
 
 				</div>
 				<div class="footer__bottom">
-						<p>&copy; Egil J. Swenning Leyser</p>
-				</div>
-				
-				<div class="site-grid-footer-image">
-					<img src="image/footer-image.png" alt="" class="site-grid-footer-image__image-element" aria-hidden="true"/>
+						<p>&copy; Egil J. Swenning <wbr>Leyser</p>
 				</div>
 			</footer>
 		</div>

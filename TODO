@@ -1,0 +1,26 @@
+-  critical css?
+-  keep text-style the same over the page
+-  animations
+	OK animated gradient
+	- animated links
+	- animation on scroll
+OK editorconfig
+- skelleton loading
+? darkmode button
+	? fix layout on safari/chrome
+OK fix emoji colour in safari
+OK picture element in nav
+	OK change color
+OK env(safe-area-inset-left);
+- content
+	- fill all text from lorem ipsum
+	- images
+- a11y
+	- :focus for tab, not always
+	? have specific names for the portfolio-links
+- footer
+	- font awesome render problem
+	- form -> link better?
+	- validation: checkmark
+	- switch between placeholder and label
+
