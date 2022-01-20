@@ -1,15 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		
 		<meta charset="utf-8">
 
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 		<link rel="stylesheet" href="./styles/style.css">
 		
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&family=Playfair+Display:wght@900&family=Sora:wght@800&display=swap" rel="stylesheet">
 		<title>Home | Egil J. Swenning Leyser</title>
 
 
@@ -42,19 +39,203 @@
 
 		<meta name="theme-color" content="#c43939" media="(prefers-color-scheme: dark)">
 		<meta name="theme-color" content="#ff494a" media="(prefers-color-scheme: light)">
+		<script src="https://kit.fontawesome.com/3d485ce067.js" crossorigin="anonymous"></script>
 
 
 
+		<style>
+		@font-face {
+  font-family: "Sora";
+  src: url(../font/Sora-VariableFont_wght.ttf);
+  font-weight: 800;
+}
+body {
+  font-family: arial, sans-serif;
+  font-size: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.site-grid-nav__ul {
+  list-style: none;
+  font-family: "Sora", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.site-grid-nav__ul li {
+  display: inline;
+  font-weight: 800;
+  padding: 1em;
+  font-size: 1rem;
+}
+.site-grid-nav__ul li .nav__name {
+  font-weight: 100;
+  text-decoration: none;
+}
+.site-grid-nav__ul li #site-grid-nav__darkmode-button {
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: gray;
+  font-size: 1rem;
+  line-height: 0;
+  padding: 0;
+}
+.site-grid-nav__ul li a {
+  text-decoration: none;
+}
+.site-grid-nav__ul li a:link {
+  text-decoration: none;
+  color: #171717;
+}
+.site-grid-nav__ul li a:visited {
+  color: #171717;
+  text-decoration: none;
+}
+.site-grid-nav__ul li a:hover {
+  text-decoration: none;
+}
+.site-grid-nav__ul li a:active {
+  text-decoration: none;
+}
 
+body.dark .site-grid-nav__ul li a {
+  text-decoration: none;
+}
+body.dark .site-grid-nav__ul li a:link {
+  text-decoration: none;
+  color: #efefef;
+}
+body.dark .site-grid-nav__ul li a:visited {
+  color: #efefef;
+  text-decoration: none;
+}
+body.dark .site-grid-nav__ul li a:hover {
+  text-decoration: none;
+}
+body.dark .site-grid-nav__ul li a:active {
+  text-decoration: none;
+}
 
+.above-fold-text__text {
+  font-size: 58px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1em;
+  margin: 0 1em;
+}
+
+@media screen and (min-width: 320px) {
+  .above-fold-text__text {
+    font-size: calc(58px + 8 * ((100vw - 320px) / 960));
+  }
+}
+@media screen and (min-width: 500px) {
+  .above-fold-text__text {
+    font-size: 70px;
+  }
+}
+.site-grid-nav {
+  width: 100%;
+  height: min-content;
+  background-color: lightgray;
+  background: linear-gradient(180deg, #acacac 0%, rgba(211, 211, 211, 0) 80%);
+}
+.site-grid-nav .site-grid-nav__ul {
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+}
+.site-grid-nav .site-grid-nav__ul li:first-child {
+  align-self: flex-start;
+  flex-grow: 1;
+}
+.site-grid-nav .site-grid-nav__ul .nav__name {
+  display: flex;
+}
+.site-grid-nav .site-grid-nav__ul #nav__name--shield {
+  height: 2em;
+}
+.site-grid-nav .site-grid-nav__ul #nav__name--shield path {
+  stroke: #171717;
+}
+.site-grid-nav .site-grid-nav__ul #nav__name--egil {
+  margin-left: 0.5em;
+}
+@media screen and (max-width: 581px) {
+  .site-grid-nav #nav__name--egil {
+    display: none;
+  }
+}
+.site-grid-nav #site-grid-nav__darkmode-button {
+  width: 2em;
+  background-color: transparent;
+  border-radius: 1em;
+  height: 2em;
+  border: #fa0536 solid 3px;
+  text-align: center;
+}
+.site-grid-nav body.dark #site-grid-nav__darkmode-button {
+  border: #c63939 solid 3px;
+}
+
+body.dark .site-grid-nav {
+  background: linear-gradient(180deg, #464646 0%, rgba(211, 211, 211, 0) 80%);
+}
+
+body.dark .site-grid-nav #nav__name--shield path {
+  stroke: #efefef;
+}
+
+.site-grid-above-fold-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.site-grid-above-fold-text .above-fold-text__text {
+  background: linear-gradient(165deg, #ff494a, #fe38b5, #c427fd, #2f16fb, #0584fa);
+  background-size: 400% 400%;
+  animation: text-gradient 15s ease infinite;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  justify-content: space-around;
+}
+@keyframes text-gradient {
+  0% {
+    background-position: 0%;
+  }
+  50% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .site-grid-above-fold-text .above-fold-text__text {
+    background: linear-gradient(165deg, #ff494a, #fe38b5, #c427fd, #2f16fb, #0584fa);
+    background-size: 100% 100%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation-duration: 0s;
+  }
+}
+		</style>
 	</head>
-	<body class="toggle-me" onload="getPost()">
+	<body class="toggle-me" onload="bodyOnLoad()">
 		<div class="site-grid-container">
 			<nav class="site-grid-nav">
 				<ul class="site-grid-nav__ul">
-					<li class="nav__ul--large"><a href="./index.html" class="nav__name">Egil <span class="nav__name--span">J.</span> Swenning Leyser</a></li>
-					<li><a href="pages/contact.html" class="nav__item">Contact</a></li>
-					<li><a href="pages/contact.html" class="nav__item">About Me</a></li>
+					<li class="nav__ul">
+						<a href="./index.html" class="nav__name" aria-label="Home">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 53 54" id="nav__name--shield">
+								<path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" stroke-width="6" d="M38.4129 4s-.3185 7.829 7.891 7.829C54.5135 11.829 42.8198 50 26.7941 50h-.5883C10.1801 50-1.51332 11.829 6.69599 11.829 14.9055 11.829 14.587 4 14.587 4h23.8259Z" clip-rule="evenodd"/>
+							</svg>
+							<span id="nav__name--egil">Egil J. Swenning Leyser</span>							
+						</a>
+					</li>
+				
+					<li><a href="pages/about.html" class="nav__item">About Me</a></li>
 					<li>
 						<button id="site-grid-nav__darkmode-button" onclick="toggleState()">
 							☀
@@ -63,40 +244,56 @@
 				</ul>
 				
 			</nav>
-<!-- 			<div class="site-grid-above-fold-image">
-				<img src="image/above-fold-image.png" alt="" class="above-fold-image__image-element" aria-hidden="true"/>
-			</div> -->
-			<div class="site-grid-above-fold-text">
+			<aside class="site-grid-above-fold-text">
 					<p class="above-fold-text__text">
 						Frontend, UX, and UI from <wbr>Uppsala, Sweden.
 					</p>
-			</div>
+			</aside>
 			<main class="site-grid-main">
-				<h2>Example work</h2>
+				<h1>Example work</h1>
 				<p class="main__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-				<div class="main__card">
-				</div>
+				<ul class="main__card">
+					<!-- <li style="background-color: blue;"></li> -->
+				</ul>
 			</main>
 			
 			<footer class="site-grid-footer">
+				<div class="footer__end" aria-hidden="true"></div>
 				<div class="footer__big-box">
-						<div class="big-box__large"><p>a</p></div>
-						<div class="big-box__small"><p>b</p></div>
-						<div class="big-box__small"><p>c</p></div>
+						<div class="big-box__large">
+							
+							<form class="footer__form" action="" method="POST" onsubmit="formHandling(); return false;" enctype="multipart/form-data">
+								<label for="senderName">Name</label>
+								<div class="form__input-validation">
+									<input id="senderName" type="text" name="name" required>
+									<div class="validation__check">✓</div>
+								</div>
+								<label for="senderText">Message</label>
+								<div class="form__input-validation">
+									<textarea id="senderText" name="message" required></textarea>
+									<div class="validation__check">✓</div>
+								</div>
+								<button id="senderButton" type="submit">Send <i class="far fa-paper-plane"></i></button>
+							</form>
+						</div>
+						<div class="big-box__small">
+							<ul>
+								<li class="twitter-list"><i class="fab fa-twitter"></i>Twitter: <a href="#">@egiiiiil</a></li>
+								<li class="github-list"><i class="fab fa-github"></i>GitHub: <a href="https://github.com/egiiiiil">egiiiiil</a></li>
+								<li class="mail-list"><i class="far fa-envelope"></i>Mail: <a href="mailto:hello@egiljswenningleyser.se">hello@egil<wbr>jswenning<wbr>leyser.se</a></li>
+							</ul>
+						</div>
 
 				</div>
 				<div class="footer__bottom">
-						<p>&copy; Egil J. Swenning Leyser</p>
-				</div>
-				
-				<div class="site-grid-footer-image">
-					<img src="image/footer-image.png" alt="" class="site-grid-footer-image__image-element" aria-hidden="true"/>
+						<p>&copy; Egil J. Swenning <wbr>Leyser</p>
 				</div>
 			</footer>
 		</div>
 		<script src="scripts/dark-mode-button.js"></script>
 		<script src="scripts/fetch-post.js"></script>
 		<script src="scripts/body-on-load.js"></script>
+		<script src="scripts/form-handling.js"></script>
 
 		
 	</body>

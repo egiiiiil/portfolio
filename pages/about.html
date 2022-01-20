@@ -22,7 +22,7 @@
 		<link rel="canonical" href="https://www.egiljswenningleyser.com/page">
 
 		<link rel="icon" href="../image/favicon/favicon.ico">
-		<link rel="icon" href="../image/favicon/favicon.svg" type="image/svg+xml">
+		<link rel="icon" href="../image/favicon/favicon.ico" type="image/svg+xml">
 		<link rel="apple-touch-icon" href="../image/favicon/apple-touch-icon.png">
 		<link rel="manifest" href="../manifest.webmanifest">
 
@@ -214,7 +214,7 @@
 	}
 			</style>
 	</head>
-	<body class="toggle-me" onload="postOnLoad()">
+	<body class="toggle-me" onload="contactOnLoad()">
 	<div class="site-grid-container">
 		<nav class="site-grid-nav">
 			<ul class="site-grid-nav__ul">
@@ -226,6 +226,7 @@
 						<span id="nav__name--egil">Egil J. Swenning Leyser</span>							
 					</a>
 				</li>
+				
 				<li><a href="about.html" class="nav__item">About Me</a></li>
 				<li>
 					<button id="site-grid-nav__darkmode-button" onclick="toggleState()">
@@ -233,11 +234,52 @@
 					</button>
 				</li>
 			</ul>
+			
 		</nav>
 		<main class="site-grid-main">
-			<article class="post__content">
-				<h1>Portfolio</h1>
-			</article>
+			<h1>About</h1>
+			<div class="about-main">
+				<div class="about__content">
+					<p class="main__p">My name is Egil J. Swenning Leyser from Uppsala, Sweden, currently studying Frontend Development at Hyper Island. </p>
+					<h2>Earlier Work</h2>
+					<ul class="main__ul about-list">
+						<li>2020-2021 R2B Software</li>
+						<li>2020 Saco-S at Uppsala University</li>
+						<li>2015-2021 BHS Coordinator, Swedavia</li>
+						<li>2012-2020 Baggage Technician, Swedavia</li>
+					</ul>
+					<h2>Internships</h2>
+					<ul class="main__ul about-list">
+						<li>2016-2017 Frontend developer, 株式会社ikkai</li>
+						<li>2010-2011 Photographer Assistant for Johan Wahlgren</li>
+						<li>2010 Frontend developer, das Duell</li>
+					</ul>
+					<h2>Education</h2>
+					<ul class="main__ul about-list">
+						<li>2021 Frontend Developer, Changemaker Eduacation</li>
+						<li>2014-2021 Bachelor of Science in Informatics, Kristianstad University</li>
+						<li>2011-2012 カイ日本語スクール – Kai Japanese Language School</li>
+					</ul>
+					<h2>Contact me at</h2>
+					<ul class="main__ul about-list">
+						<li class="twitter-list"><i class="fab fa-twitter"></i><a href="#">@egiiiiil</a></li>
+						<li class="github-list"><i class="fab fa-github"></i><a href="https://github.com/egiiiiil">egiiiiil</a></li>
+						<li class="mail-list"><i class="far fa-envelope"></i><a href="mailto:hello@egiljswenningleyser.se">hello@egiljswenning<wbr>leyser.se</a></li>
+					</ul>
+
+
+
+
+
+
+
+
+
+				</div>
+				<div class="about__image-wrapper">
+					<img src="../image/about/photo-egilswenningleyser.png" class="" alt="Red and beight duotone photo of Egil">
+				</div>
+			</div>
 		</main>
 		
 		<footer class="site-grid-footer">
@@ -275,7 +317,7 @@
 	</div>
 	<script src="../scripts/dark-mode-button.js"></script>
 	<script src="../scripts/fetch-post.js"></script>
-	<script src="../scripts/post-on-load.js"></script>
+	<script src="../scripts/contact-on-load.js"></script>
 	<script src="../scripts/form-handling.js"></script>
 
 	

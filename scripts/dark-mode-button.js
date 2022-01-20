@@ -4,7 +4,6 @@ let buttonText = document.querySelector('#site-grid-nav__darkmode-button');
 
 let preferColorSchemeDark  = window.matchMedia('(prefers-color-scheme: dark)');
 let preferColorSchemeLight = window.matchMedia('(prefers-color-scheme: light)');
-
 /* CHECK IF DARKMODE IS ACTIVE */
 checkDark = () => {
 	console.log('1');
