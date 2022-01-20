@@ -1,26 +1,33 @@
 -  critical css?
--  keep text-style the same over the page
--  animations
+OK  keep text-style the same over the page
+OK  animations
 	OK animated gradient
-	- animated links
-	- animation on scroll
+	OK animated links
 OK editorconfig
-- skelleton loading
-? darkmode button
-	? fix layout on safari/chrome
+X darkmode
+	X fix layout on safari/chrome
+	X urlsuffix -> cookies
 OK fix emoji colour in safari
 OK picture element in nav
 	OK change color
 OK env(safe-area-inset-left);
-- content
+X content
 	- fill all text from lorem ipsum
 	- images
-- a11y
-	- :focus for tab, not always
-	? have specific names for the portfolio-links
+OK a11y
+	? :focus for tab, not always
+	OK have specific names for the portfolio-links
 - footer
-	- font awesome render problem
-	- form -> link better?
-	- validation: checkmark
-	- switch between placeholder and label
+	OK font awesome render problem
+	? form -> link better?
+	OK validation: checkmark
+	X switch between placeholder and label
+	OK change size.
 
+
+
+
+X cookie
+OK form
+OK form style
+OK critical css?
