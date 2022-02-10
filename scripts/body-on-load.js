@@ -1,4 +1,0 @@
-function bodyOnLoad() {
-	checkDark();
-	getPost();
-}

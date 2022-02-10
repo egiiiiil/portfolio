@@ -1,4 +1,0 @@
-function postOnLoad() {
-	checkDark();
-	getPostFromId()
-}
