@@ -1,0 +1,68 @@
+.above-fold-text__text {
+	font-size: 58px;
+	font-weight: 800;
+	letter-spacing: 0.08em;
+	line-height: 1em;
+	margin: 0 1em;
+}
+@media screen and (min-width: 320px) {
+	.above-fold-text__text {
+		font-size: calc(58px + 8 * ((100vw - 320px) / 960));
+	}
+}
+@media screen and (min-width: 500px) {
+	.above-fold-text__text {
+		font-size: 70px;
+	}
+}
+.site-grid-above-fold-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+.site-grid-above-fold-text .above-fold-text__text {
+	background: linear-gradient(
+		165deg,
+		#ff494a,
+		#fe38b5,
+		#c427fd,
+		#2f16fb,
+		#0584fa
+	);
+	background-size: 400% 400%;
+	animation: text-gradient 15s ease infinite;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
+	justify-content: space-around;
+}
+@keyframes text-gradient {
+	0% {
+		background-position: 0%;
+	}
+	50% {
+		background-position: 100%;
+	}
+	100% {
+		background-position: 0%;
+	}
+}
+
+@media (prefers-reduced-motion) {
+	.site-grid-above-fold-text .above-fold-text__text {
+		background: linear-gradient(
+			165deg,
+			#ff494a,
+			#fe38b5,
+			#c427fd,
+			#2f16fb,
+			#0584fa
+		);
+		background-size: 100% 100%;
+		-webkit-text-fill-color: transparent;
+		-webkit-background-clip: text;
+		background-clip: text;
+		animation-duration: 0s;
+	}
+}

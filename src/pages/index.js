@@ -1,17 +1,16 @@
 import * as React from 'react'
 import Layout from '../components/layout'
+import AboveFoldText from '../components/AboveFoldText/AboveFoldText'
 import { StaticImage } from 'gatsby-plugin-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { Link, graphql } from 'gatsby'
 
 const IndexPage = ({ data }) => {
+
   return (
     <Layout pageTitle="Home Page">
-      <aside className="site-grid-above-fold-text">
-			  <p className="above-fold-text__text">
-					Frontend, UX, and UI from <wbr/>Uppsala, Sweden.
-				</p>
-			</aside>
+      <AboveFoldText />
       <main className="site-grid-main">
         
 {/*         <StaticImage
@@ -20,13 +19,15 @@ const IndexPage = ({ data }) => {
         /> */}
         {
         data.allMdx.nodes.map((node) => (
+          console.log(node),
           <ul key={node.id}>
             <h2>
               <Link to={`/blog/${node.slug}`}>
                 {node.frontmatter.title}
               </Link>
             </h2>
-            {/* <p>Posted: {node.frontmatter.date}</p> */}
+
+            <p>Posted: {node.frontmatter.date}</p>
             <MDXRenderer>
               {node.body}
             </MDXRenderer>
@@ -45,6 +46,12 @@ export const query = graphql`
         frontmatter {
           date(formatString: "MMMM D, YYYY")
           title
+          hero_image_alt
+          hero_image {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
         }
         id
         body

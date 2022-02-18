@@ -1,0 +1,40 @@
+body {
+	font-family: "Montserrat";
+	color: #efefef;
+}
+a:link {
+	color: #efefef;
+}
+
+a:visited {
+	color: #efefef;
+}
+a:hover {
+	color: #efefef;
+}
+a:active {
+	color: #efefef;
+}
+
+/* PORTFOLIO */
+main p a:link {
+	font-weight: 900;
+}
+main p a:after {
+	display: inline-flex;
+	content: url("../images/a-tag__regular.svg");
+	padding-left: 0.2em;
+}
+/* FOOTER */
+footer {
+	color: #020202;
+}
+footer ul li a:link {
+	font-weight: bold;
+	color: #020202;
+}
+footer ul li a:after {
+	display: inline-flex;
+	content: url("../images/a-tag__footer.svg");
+	padding-left: 0.2em;
+}

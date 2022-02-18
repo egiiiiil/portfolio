@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "Egil J. Swenning Leyser's Portfolio",
+    title: "Egil J. Swenning Leyser",
   },
   plugins: [
     "gatsby-plugin-image",
@@ -14,5 +14,6 @@ module.exports = {
     },
     "gatsby-plugin-mdx",
     "gatsby-transformer-sharp",
+    "gatsby-plugin-postcss",
   ],
 };

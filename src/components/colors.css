@@ -1,0 +1,11 @@
+body {
+	background-color: #171717;
+}
+@media (width <= 480px) {
+	body {
+		background-color: green;
+	}
+}
+.site-grid-footer {
+	background-color: white;
+}

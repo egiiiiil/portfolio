@@ -1,6 +1,11 @@
 import * as React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
+import '@fontsource/montserrat'
+import './font.css'
+import './colors.css'
 import './layout.css'
+import Navbar from './Navbar/Navbar'
+import Footer from './Footer/Footer'
 
 const Layout = ({ pageTitle, children }) => {
 	const data = useStaticQuery(graphql`
@@ -16,29 +21,12 @@ const Layout = ({ pageTitle, children }) => {
 		<div className="site-grid-container">
 			<title>{pageTitle} | {data.site.siteMetadata.title}</title>
       <div className="site-grid-nav">
-				<header className="site-title">
-					<nav>
-						<ul className="nav-links">
-							<li className="nav-link-item">
-								<Link to="/" className="nav-link-text">
-								{data.site.siteMetadata.title}
-								</Link>
-							</li>
-							<li className="nav-link-item">
-								<Link to="/about" className="nav-link-text">
-									About
-								</Link>
-							</li>
-							<li>
-								<button>Dark Mode</button>
-							</li>
-						</ul>
-					</nav>
-				</header>
+				<Navbar />
 			</div>
 			<>
 				{children}
 			</>
+			<Footer />
 		</div>
 	)
 }

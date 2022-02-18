@@ -27,3 +27,6 @@
 .site-grid-main {
 	grid-column: 2;
 }
+.site-grid-footer {
+	grid-column: 1 / 4;
+}
