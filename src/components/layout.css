@@ -1,0 +1,32 @@
+.site-grid-container {
+	display: grid;
+	grid-template-rows: max-content;
+	grid-template-columns: 1fr 80% 1fr;
+}
+.site-grid-nav {
+	grid-column: 1 / 4;
+	grid-row: 1;
+}
+.site-grid-nav .nav-links {
+	display: flex;
+	list-style: none;
+	padding-left: 0;
+}
+.nav-link-item {
+	padding-right: 2rem;
+}
+
+.nav-link-text {
+	color: black;
+}
+.site-grid-above-fold-text {
+	grid-column: 1 / 4;
+	grid-row: 2 / 2;
+	height: 100vh;
+}
+.site-grid-main {
+	grid-column: 2;
+}
+.site-grid-footer {
+	grid-column: 1 / 4;
+}
