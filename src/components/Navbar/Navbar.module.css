@@ -1,0 +1,16 @@
+.navLinks {
+	display: flex;
+	list-style: none;
+	padding: 0 1em;
+	justify-content: flex-start;
+	gap: 1em;
+}
+.navLinkItem {
+	/* padding-right: 2rem; */
+}
+.navLinkItem:nth-child(2) {
+	flex-grow: 1;
+}
+.navLinkText {
+	color: black;
+}

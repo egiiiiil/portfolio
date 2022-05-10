@@ -1,26 +1,33 @@
 body {
-	font-family: "Montserrat";
-	color: #efefef;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+		Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	color: #020202;
 }
 a:link {
-	color: #efefef;
+	color: #020202;
 }
 
 a:visited {
-	color: #efefef;
+	color: #020202;
 }
 a:hover {
-	color: #efefef;
+	color: #020202;
 }
 a:active {
-	color: #efefef;
+	color: #020202;
 }
 
 /* PORTFOLIO */
-main p a:link {
+/* main p a:link {
 	font-weight: 900;
+} */
+a[href="https://github.com/egiiiiil/hyper-lemur-radio"]::before
+{
+	content: "♥ ";
+	padding-left: 0.2em;
 }
-main p a:after {
+
+main p a::after {
 	display: inline-flex;
 	content: url("../images/a-tag__regular.svg");
 	padding-left: 0.2em;
@@ -30,10 +37,9 @@ footer {
 	color: #020202;
 }
 footer ul li a:link {
-	font-weight: bold;
 	color: #020202;
 }
-footer ul li a:after {
+footer ul li a::after {
 	display: inline-flex;
 	content: url("../images/a-tag__footer.svg");
 	padding-left: 0.2em;

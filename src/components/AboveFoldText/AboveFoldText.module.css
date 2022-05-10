@@ -1,0 +1,75 @@
+.aboveFoldText__text {
+	font-size: 46px;
+	font-weight: 900;
+	letter-spacing: 0.08em;
+	line-height: 1em;
+	margin: 0 1em;
+}
+@media screen and (min-width: 320px) {
+	.aboveFoldText__text {
+		font-size: calc(46px + 8 * ((100vw - 320px) / 960));
+	}
+}
+@media screen and (min-width: 500px) {
+	.aboveFoldText__text {
+		font-size: 46px;
+	}
+}
+.aboveFoldText__container{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	height: 100%;
+	background-image: url("../../images/mesh-gradient.png");
+	background-color: #cccccc;
+	background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+/* 	background: linear-gradient(
+		165deg,
+		#ff494a,
+		#fe38b5,
+		#c427fd,
+		#2f16fb,
+		#0584fa
+	);
+	background-size: 400% 400%;
+	height: 100%;
+	animation: text-gradient 15s ease infinite; */
+/* 	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	background-clip: text; */
+}
+@keyframes text-gradient {
+	0% {
+		background-position: 0%;
+	}
+	50% {
+		background-position: 100%;
+	}
+	100% {
+		background-position: 0%;
+	}
+}
+
+@media (prefers-reduced-motion) {
+	.aboveFoldText__container {
+		background: linear-gradient(
+			165deg,
+			#ff494a,
+			#fe38b5,
+			#c427fd,
+			#2f16fb,
+			#0584fa
+		);
+		background-size: 100% 100%;
+		-webkit-text-fill-color: transparent;
+		-webkit-background-clip: text;
+		background-clip: text;
+		animation-duration: 0s;
+	}
+}
+.aboveFoldText__svg {
+	width: 3em
+}
