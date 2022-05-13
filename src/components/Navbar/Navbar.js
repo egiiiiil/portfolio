@@ -1,6 +1,8 @@
 import * as React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 
+import DarkModeButton from '../DarkmodeButton/DarkmodeButton'
+
 import * as style from './Navbar.module.css'
 import '../layout.css'
 
@@ -23,13 +25,13 @@ const Navbar = () => {
 							{data.site.siteMetadata.title}
 						</Link>
 					</li>
-					<li className={style.navLinkItem}>
+					{/* <li className={style.navLinkItem}>
 						<Link to="/about" className={style.navLinkText}>
 							About Me
 						</Link>
-					</li>
+					</li> */}
 					<li>
-						<button>&#127774;</button>
+						<DarkModeButton />
 					</li>
 				</ul>
 			</nav>

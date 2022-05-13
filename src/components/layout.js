@@ -6,7 +6,6 @@ import './colors.css'
 import './layout.css'
 import Navbar from './Navbar/Navbar'
 import Footer from './Footer/Footer'
-import a from '../../'
 import { Helmet } from 'react-helmet'
 
 const Layout = ({ pageTitle, children }) => {

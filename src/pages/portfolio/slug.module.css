@@ -3,3 +3,32 @@
 	width: 1em;
 	margin-right: 0.5em;
 }
+.topInfo{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: baseline;
+}
+.topInfo h2 {
+	font-size: 1.2em;
+}
+.topInfo p time {
+	font-size: 1em;
+	color: #858585;
+}
+.contentContainer {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+}
+.contentContainer .text {
+	max-width: 60ch;
+}
+.contentContainer .list  {
+	padding-left: 0;
+}
+
+.contentContainer .listItem {
+	list-style-type: none;
+
+}

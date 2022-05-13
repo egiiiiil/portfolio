@@ -1,0 +1,25 @@
+.liCard {
+	list-style: none;
+	width: 42%;
+
+	padding: 1.5em;
+	/* margin: 0.5em; */
+	
+	border-radius: 20px;
+	background: #ffffff;
+	box-shadow:  35px 35px 70px #d9d9d9,
+							 -35px -35px 70px #ffffff;
+}
+.liCard h2 {
+	font-size: 1.2em;
+}
+.liCard p time {
+	font-size: 1em;
+	color: #858585;
+}
+.liCardTop{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: baseline;
+}

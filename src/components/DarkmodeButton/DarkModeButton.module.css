@@ -1,0 +1,9 @@
+.darkmodeButton {
+	height: 2em;
+	width: 2em;
+	padding: 0;
+	border-radius: 50%;
+	font-size: 1em;
+	/* border: 2px #000 solid; */
+	/* background-color: rgba(255, 255, 255, 0); */
+}

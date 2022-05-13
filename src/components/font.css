@@ -21,26 +21,30 @@ a:active {
 /* main p a:link {
 	font-weight: 900;
 } */
-a[href="https://github.com/egiiiiil/hyper-lemur-radio"]::before
+/* a[href="https://github.com/egiiiiil/hyper-lemur-radio"]::before
 {
 	content: "♥ ";
 	padding-left: 0.2em;
-}
+} */
 
 main p a::after {
 	display: inline-flex;
 	content: url("../images/a-tag__regular.svg");
-	padding-left: 0.2em;
+	padding-left: 0.4em;
+}
+main p time {
+	font-size: 0.9em;
 }
 /* FOOTER */
 footer {
-	color: #020202;
+	color: #efefef;
 }
 footer ul li a:link {
-	color: #020202;
+	color: #efefef;
 }
 footer ul li a::after {
 	display: inline-flex;
-	content: url("../images/a-tag__footer.svg");
+	content: url("../images/arrow__out.svg");
 	padding-left: 0.2em;
+	
 }
