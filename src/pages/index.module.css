@@ -10,6 +10,12 @@
 	box-shadow:  35px 35px 70px #d9d9d9,
 							 -35px -35px 70px #ffffff;
 }
+@media only screen and (max-device-width: 480px) {
+	.liCard {
+		width: 100%;
+	}
+}
+
 .liCard h2 {
 	font-size: 1.2em;
 }

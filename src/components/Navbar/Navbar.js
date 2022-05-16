@@ -21,9 +21,11 @@ const Navbar = () => {
 			<nav>
 				<ul className={style.navLinks}>
 					<li className={style.navLinkItem}>
-						<Link to="/" className={style.navLinkText}>
-							{data.site.siteMetadata.title}
-						</Link>
+						<span className="navName">
+							<Link to="/" className={style.navLinkText}>
+								{data.site.siteMetadata.title}
+							</Link>
+						</span>
 					</li>
 					{/* <li className={style.navLinkItem}>
 						<Link to="/about" className={style.navLinkText}>

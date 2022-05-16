@@ -1,14 +1,118 @@
 ---
 title: 'Dinogotchi'
 date: '2021-10-07'
-hero_image: './coffecan.png'
-hero_image_alt: 'A gray pitbull relaxing on the sidewalk with its tongue hanging out'
+hero_image: './dinogotchi.png'
+hero_image_alt: 'The pink T-Rex from Dinogotchi on a yellow background'
 tech_stack: [Vanilla JS, LocalStorage]
-blurb: 'A pet game where try to keep the dinosaur alive.'
+blurb: 'A pet game where you try to keep the dinosaur alive.'
+logo_image: './dinogotchi-logo.png'
+logo_image_alt: 'Dinogotchi logotype'
 ---
 
 [GitHub Repo](https://github.com/egiiiiil/dream-team-module-2)
 
-A pet game where try to keep the dinosaur alive. Made as a group project. Written in JS and saved with LocalStorage. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tellus ex, auctor et facilisis nec, pulvinar vitae ipsum. Duis tristique justo ex, vel commodo nibh consequat at. Fusce ultrices, ex ut lacinia sodales, risus libero mattis metus, vitae molestie ligula ipsum vitae nisi. Nulla nec vestibulum justo, ut aliquam augue. Etiam vitae leo nec odio gravida posuere. Duis vel ipsum tortor. Donec viverra enim eu tellus tincidunt, et ullamcorper erat molestie. Donec neque mauris, laoreet id vestibulum sed, finibus at elit. Nulla dignissim tincidunt molestie. Sed nec velit semper tortor ullamcorper varius ac nec eros. Praesent lorem neque, commodo suscipit dui et, fringilla iaculis leo. Proin ornare finibus justo. Vestibulum nec leo sit amet tellus posuere tempus. Aliquam imperdiet ipsum sit amet suscipit condimentum.
+A group project at Hyper Island game where you try to keep the dinosaur alive. Like a Tamagotchi but with a dinosaur. Keep it fed and don’t let it die!
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lobortis, erat vitae cursus aliquet, justo dolor congue quam, id auctor metus est blandit tortor. Nulla in mollis ex, eu lobortis lorem. Quisque interdum dolor sed quam auctor eleifend. Vestibulum velit lorem, aliquet eget dui ac, maximus varius libero. Morbi interdum est in neque auctor euismod. Nunc facilisis, ante ac egestas elementum, sem nisl dapibus mauris, a semper risus risus non dolor. Maecenas sed mi erat. Nullam tristique lobortis sollicitudin. Donec nec pellentesque elit. Proin commodo, leo at tempus rhoncus, risus justo convallis sem, et blandit enim massa gravida turpis. Sed efficitur diam aliquam sem pellentesque, id lobortis neque auctor. Donec lacinia leo a feugiat convallis.
+The minimum requirements for this project were to use `Date()` and `localStorage`.
+
+The main parts are the monster object that gets sent to `localStorage`
+
+```
+function createMonsterObject() {
+	//monster object
+	monster = {
+		startDate: "",
+		endDate: "",
+		currentTime: "",
+		aliveTime: "",
+		neededSleep: 8,
+		actualSleep: "",
+		neededFood: 4,
+		currentFood: 10,
+		maxFood: 10,
+		neededPlayTime: 2, //two clicks
+		currentPlayTime: "",
+		moodHappy: true,
+	};
+
+	//push monster object to local storage
+	localStorage.setItem("monster", JSON.stringify(monster));
+}
+```
+
+And the dinosaur graphic that’s just an SVG where parts like the eyes get updated. Since the eyes and arms ere grouped within the SVG it made updating the based on that’s happening in the game and animations easy.
+
+```
+<svg class="image" width="389" height="182" viewBox="0 0 389 182" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path fill-rule="evenodd" clip-rule="evenodd"
+		d="..."
+		fill="#F99595" />
+	<path
+		d="..."
+		stroke="black" stroke-width="5" stroke-miterlimit="1" stroke-linecap="round" stroke-linejoin="round" />
+	<g id="back-arm">
+		<path fill-rule="evenodd" clip-rule="evenodd"
+			d="..." fill="#F99595" />
+		<path d="..." stroke="black"
+			stroke-width="5" stroke-miterlimit="1" stroke-linecap="round" stroke-linejoin="round" />
+	</g>
+	<path fill-rule="evenodd" clip-rule="evenodd"
+		d="..."
+		fill="#FBC5C5" />
+	<path
+		d="..."
+		fill="#FBC5C5" />
+	<path fill-rule="evenodd" clip-rule="evenodd"
+		d="..."
+		stroke="black" stroke-width="5" stroke-miterlimit="1" stroke-linecap="round" stroke-linejoin="round" />
+	<path
+		d="..."
+		stroke="black" stroke-width="5" stroke-miterlimit="1" stroke-linecap="round" stroke-linejoin="round" />
+	<path fill-rule="evenodd" clip-rule="evenodd"
+		d="..."
+		fill="#FBC5C5" />
+	<path
+		d="..."
+		stroke="black" stroke-width="5" stroke-miterlimit="1" stroke-linecap="round" stroke-linejoin="round" />
+	<g id="front-arm">
+		<path fill-rule="evenodd" clip-rule="evenodd"
+			d="..."
+			fill="#FBC5C5" />
+		<path
+			d="..."
+			stroke="black" stroke-width="5" stroke-miterlimit="1" stroke-linecap="round" stroke-linejoin="round" />
+	</g>
+	<g id="eyes">
+		<path
+			d="..."
+			fill="black" stroke="black" stroke-width="2" stroke-miterlimit="1" stroke-linecap="round"
+			stroke-linejoin="round" />
+	</g>
+</svg>
+```
+
+This together with a if-statement makes the code for switching the eyes depending on the hunger.
+
+```
+let hungerEyes = () => {
+	let currentFood = monster.currentFood;
+
+	let svgHTML = document.getElementById("eyes");
+	if (currentFood === 0) {
+		console.log("dead");
+		monsterSays("dead");
+		svgHTML.innerHTML = `<path fill-rule="evenodd" clip-rule="evenodd" d="M52.4385 25L61.4385 34L52.4385 25Z" stroke="black" stroke-width="4" stroke-miterlimit="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M61 25L52 34L61 25Z" stroke="black" stroke-width="4" stroke-miterlimit="1" stroke-linecap="round" stroke-linejoin="round"/>`;
+	} else if (currentFood < 4 && currentFood >= 1) {
+		console.log("angry");
+		monsterSays("angry");
+		svgHTML.innerHTML = `<path d="M56.5 34C58.9853 34 61 31.9853 61 29.5C61 27.0147 58.9853 25 56.5 25C54.0147 25 52 27.0147 52 29.5C52 31.9853 54.0147 34 56.5 34Z" fill="black" stroke="black" stroke-width="2" stroke-miterlimit="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M60 18L46 25" stroke="black" stroke-width="4" stroke-miterlimit="1" stroke-linecap="round" stroke-linejoin="round"/>`;
+	} else if (currentFood >= 4) {
+		console.log("happy");
+		monsterSays("happy");
+		svgHTML.innerHTML =
+			'<path d="M64 33L57 26L50 33" stroke="black" stroke-width="4" stroke-miterlimit="1" stroke-linecap="round" stroke-linejoin="round"/>';
+	}
+};
+```
