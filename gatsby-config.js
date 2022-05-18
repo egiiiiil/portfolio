@@ -16,15 +16,26 @@ module.exports = {
 				path: `${__dirname}/portfolio/`,
 			},
 		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				path: `${__dirname}/src/pages`,
+			},
+		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				path: `${__dirname}/src/images`,
+			},
+		},
 		'gatsby-plugin-mdx',
 		'gatsby-transformer-sharp',
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {
-				name: 'GatsbyJS',
-				short_name: 'GatsbyJS',
+				name: 'Egil J. Swenning Leyser',
 				start_url: '/',
-				background_color: '#6b37bf',
+				background_color: '#000',
 				theme_color: '#6b37bf',
 
 				icons: [

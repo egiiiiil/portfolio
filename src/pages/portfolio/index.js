@@ -5,7 +5,7 @@ import { Link, graphql } from 'gatsby'
 
 const PortfolioPage = ({ data }) => {
 	return (
-		<Layout pageTitle="My Portfolio Posts">
+		<Layout pageTitle='My Portfolio Posts'>
 			{data.allMdx.nodes.map((node) => (
 				<article key={node.id}>
 					<h2>

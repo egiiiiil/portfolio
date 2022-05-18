@@ -1,22 +1,24 @@
 import * as React from 'react'
 import Layout from '../components/layout'
 import AboveFoldText from '../components/AboveFoldText/AboveFoldText'
-import AboutMe from '../components/AboutMe/AboutMe'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
+//import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { Link, graphql } from 'gatsby'
+import iconSwitch from '../utils/iconSwitch'
 import * as style from './index.module.css'
 const IndexPage = ({ data }) => {
 	/* console.log(data) */
+
 	return (
-		<Layout pageTitle="Home Page">
+		<Layout pageTitle='Home Page'>
 			<AboveFoldText />
 			{/* <AboutMe /> */}
-			<div className="gridMain">
-				<main className="mainContent">
-					<ul className="flexContent">
+			<div className='gridMain'>
+				<main className='mainContent' id='test'>
+					<ul className='flexContent'>
 						{data.allMdx.nodes.map((node) => (
 							/* console.log(node), */
+
 							<li key={node.id} className={style.liCard}>
 								<div className={style.liCardTop}>
 									<h2>
@@ -34,6 +36,19 @@ const IndexPage = ({ data }) => {
 								/>
 								<p>{node.frontmatter.blurb}</p>
 								{/* <MDXRenderer>{node.body}</MDXRenderer> */}
+								{console.log(node.frontmatter.tech_stack)}
+								<ul className={style.list} id='scrollGoal'>
+									{node.frontmatter.tech_stack.map((tech, i) => (
+										<li key={i} className={style.list}>
+											<div className={style.techIcons}>
+												<img
+													src={iconSwitch({ tech })}
+													className={style.iconSvg}
+												/>
+											</div>
+										</li>
+									))}
+								</ul>
 							</li>
 						))}
 					</ul>
@@ -50,6 +65,7 @@ export const query = graphql`
 					date(formatString: "MMMM D, YYYY")
 					title
 					blurb
+					tech_stack
 					hero_image_alt
 					hero_image {
 						childImageSharp {

@@ -16,13 +16,14 @@
 	}
 }
 
+
 .aboveFoldText__container{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
 	height: 100%;
-	background-image: url("../../images/mesh-gradient.png");
+	background-image: url("../../images/mesh-gradient-negroni.png");
 	background-color: #cccccc;
 	background-position: center;
   background-repeat: no-repeat;
@@ -79,3 +80,7 @@
 	animation-timing-function: ease-in-out;
 }
 
+.aboveFoldText__container button {
+	background-color: transparent;
+	border: none;
+}

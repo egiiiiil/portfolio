@@ -7,10 +7,11 @@
 	
 	border-radius: 20px;
 	background: #ffffff;
-	box-shadow:  35px 35px 70px #d9d9d9,
-							 -35px -35px 70px #ffffff;
+	box-shadow: 
+							 15px 15px 30px #d9d9d9,
+             -15px -15px 30px #ffffff;
 }
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-width: 768px) {
 	.liCard {
 		width: 100%;
 	}
@@ -29,3 +30,33 @@
 	justify-content: space-between;
 	align-items: baseline;
 }
+@media only screen and (max-width: 660px) {
+	.liCardTop{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: baseline;
+	}
+}
+.liCard ul {
+	list-style-type: none;
+}
+.contentContainer {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+	margin: 0 auto;
+	gap: 2em;
+}
+.liCard .text {
+	width: 60ch;
+	max-width: 49%;
+}
+.liCard .list  {
+	padding-left: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+}
+
+.iconSvg {width: 2.5em;}

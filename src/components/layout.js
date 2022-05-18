@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Link, useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 /* import '@fontsource/montserrat' */
 import './font.css'
 import './colors.css'
@@ -22,27 +22,17 @@ const Layout = ({ pageTitle, children }) => {
 		<>
 			{console.log(
 				console.log(
-					'%cjgfdjdjtrd',
+					'%cHello',
 					'color: white; font-family: system-ui; font-size: 20px'
 				)
 			)}
-			<div className="gridContainer">
+			<div className='gridContainer'>
 				<Helmet>
-					<meta charSet="utf-8" />
-					<meta name="theme-color" content="#FFED48" />
-					{/* 				<meta
-					name="viewport"
-					content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-				/> */}
 					<title>
 						{pageTitle} | {data.site.siteMetadata.title}
 					</title>
-					{/* <link rel="canonical" href="http://mysite.com/example" /> */}
-					<link rel="icon" href="/favicon.ico" sizes="any" />
-					{/* <!-- 32×32 --> */}
-					<link rel="icon" href="/iconsvg.svg" type="image/svg+xml" />
-					<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-					{/* <!-- 180×180 --> */}
+					<link rel='icon' href='/favicon.ico' sizes='any' />
+					<link rel='icon' href='/iconsvg.svg' type='image/svg+xml' />
 				</Helmet>
 				<Navbar />
 				<>{children}</>

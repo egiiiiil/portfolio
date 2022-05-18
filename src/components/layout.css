@@ -2,8 +2,22 @@ body {
 	margin:0; 
 	background-color: #020202;
 	width: 100wv;
+  scrollbar-color: #999 #333;
+	overflow: overlay;
+}
+body::-webkit-scrollbar {
+  width: 7px; /* Mostly for vertical scrollbars */
+  height: 7px; /* Mostly for horizontal scrollbars */
 
 }
+body::-webkit-scrollbar-thumb {
+  background: #9168d2;
+	border-radius: 10px;
+}
+/* body::-webkit-scrollbar-track {
+  background: #333;
+	border-radius: 10px;
+} */
 
 
 .gridContainer {
@@ -45,7 +59,7 @@ body {
 	background-color: #fff;
 }
 .mainContent {
-	max-width: 90%;
+	width: 90%;
 }
 .flexContent {
 	display: flex;

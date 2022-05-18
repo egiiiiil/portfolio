@@ -5,55 +5,10 @@ import '../layout.css'
 
 const AboutMe = () => {
 	return (
-		<aside className="gridAboutMe">
+		<aside className='gridAboutMe'>
 			<p className={style.aboutMe__text}>
-				My hobbies include 🏋️{/* * */} and 🍔{/* ** */}, 🍕, ☕️, 🍺
-				{/* 				<span className={style.stars}>
-					<span>*</span>
-					<span>*</span>
-					<span>*</span>
-				</span> */}
-				,🌮
-				{/* <span className={style.stars}>
-					<span>*</span>
-					<span>*</span>
-					<span>*</span>
-					<span>*</span>
-				</span> */}
-				and 🍣
-				{/* 				<span className={style.stars}>
-					<span>*</span>
-					<span>*</span>
-					<span>*</span>
-					<span>*</span>
-					<span>*</span>
-				</span> */}
-				.
+				My hobbies include 🏋️ and 🍔, 🍕, ☕️, 🍺 ,🌮 and 🍣.
 			</p>
-			{/* <p className={style.aboutMe__small}>
-				* weightlifting, ** hamburgers,{' '}
-				<span className={style.stars}>
-					<span>*</span>
-					<span>*</span>
-					<span>*</span>
-				</span>
-				pizza,
-				<span className={style.stars}>
-					<span>*</span>
-					<span>*</span>
-					<span>*</span>
-					<span>*</span>
-				</span>
-				tacos,
-				<span className={style.stars}>
-					<span>*</span>
-					<span>*</span>
-					<span>*</span>
-					<span>*</span>
-					<span>*</span>
-				</span>
-				sushi
-			</p> */}
 		</aside>
 	)
 }

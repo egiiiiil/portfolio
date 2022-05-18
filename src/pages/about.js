@@ -3,8 +3,8 @@ import Layout from '../components/layout'
 
 const AboutPage = () => {
 	return (
-		<Layout pageTitle="About Me">
-			<main className="gridMain"></main>
+		<Layout pageTitle='About Me'>
+			<main className='gridMain'></main>
 		</Layout>
 	)
 }

@@ -17,12 +17,12 @@ const Navbar = () => {
 		}
 	`)
 	return (
-		<header className="gridNav">
+		<header className='gridNav'>
 			<nav>
 				<ul className={style.navLinks}>
 					<li className={style.navLinkItem}>
-						<span className="navName">
-							<Link to="/" className={style.navLinkText}>
+						<span className='navName'>
+							<Link to='/' className={style.navLinkText}>
 								{data.site.siteMetadata.title}
 							</Link>
 						</span>
