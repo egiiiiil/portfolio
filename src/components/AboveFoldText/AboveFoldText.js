@@ -19,13 +19,16 @@ const AboveFoldText = () => {
 					My hobbies include 🏋️, 🍔, 🍕, ☕️, 🍺, 🌮 and 🍣.
 				</p>
 				<p className={style.aboveFoldText__text}>
-					Contact me at hello@egilswenningleyser.dev
+					Contact me at{' '}
+					<a href='mailto:test@example.com?subject=Hello!'>
+						hello@egilswenningleyser.dev
+					</a>
 				</p>
 
 				<button
 					onClick={() => {
 						console.log('aaaa')
-						navigate('#test')
+						navigate('#content-start')
 					}}
 				>
 					<svg

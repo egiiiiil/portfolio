@@ -11,6 +11,8 @@ logo_image_alt: 'Dinogotchi logotype'
 
 [GitHub Repo](https://github.com/egiiiiil/dream-team-module-2)
 
+[Live version](https://egiiiiil.github.io/dinogotchi/)
+
 A group project at Hyper Island game where you try to keep the dinosaur alive. Like a Tamagotchi but with a dinosaur. Keep it fed and don’t let it die!
 
 The minimum requirements for this project were to use `Date()` and `localStorage`.
@@ -44,49 +46,16 @@ And the dinosaur graphic that’s just an SVG where parts like the eyes get upda
 
 ```
 <svg class="image" width="389" height="182" viewBox="0 0 389 182" fill="none" xmlns="http://www.w3.org/2000/svg">
-	<path fill-rule="evenodd" clip-rule="evenodd"
-		d="..."
-		fill="#F99595" />
-	<path
-		d="..."
-		stroke="black" stroke-width="5" stroke-miterlimit="1" stroke-linecap="round" stroke-linejoin="round" />
+	...
 	<g id="back-arm">
-		<path fill-rule="evenodd" clip-rule="evenodd"
-			d="..." fill="#F99595" />
-		<path d="..." stroke="black"
-			stroke-width="5" stroke-miterlimit="1" stroke-linecap="round" stroke-linejoin="round" />
+		...
 	</g>
-	<path fill-rule="evenodd" clip-rule="evenodd"
-		d="..."
-		fill="#FBC5C5" />
-	<path
-		d="..."
-		fill="#FBC5C5" />
-	<path fill-rule="evenodd" clip-rule="evenodd"
-		d="..."
-		stroke="black" stroke-width="5" stroke-miterlimit="1" stroke-linecap="round" stroke-linejoin="round" />
-	<path
-		d="..."
-		stroke="black" stroke-width="5" stroke-miterlimit="1" stroke-linecap="round" stroke-linejoin="round" />
-	<path fill-rule="evenodd" clip-rule="evenodd"
-		d="..."
-		fill="#FBC5C5" />
-	<path
-		d="..."
-		stroke="black" stroke-width="5" stroke-miterlimit="1" stroke-linecap="round" stroke-linejoin="round" />
+	...
 	<g id="front-arm">
-		<path fill-rule="evenodd" clip-rule="evenodd"
-			d="..."
-			fill="#FBC5C5" />
-		<path
-			d="..."
-			stroke="black" stroke-width="5" stroke-miterlimit="1" stroke-linecap="round" stroke-linejoin="round" />
+		...
 	</g>
 	<g id="eyes">
-		<path
-			d="..."
-			fill="black" stroke="black" stroke-width="2" stroke-miterlimit="1" stroke-linecap="round"
-			stroke-linejoin="round" />
+		...
 	</g>
 </svg>
 ```
@@ -101,18 +70,16 @@ let hungerEyes = () => {
 	if (currentFood === 0) {
 		console.log("dead");
 		monsterSays("dead");
-		svgHTML.innerHTML = `<path fill-rule="evenodd" clip-rule="evenodd" d="M52.4385 25L61.4385 34L52.4385 25Z" stroke="black" stroke-width="4" stroke-miterlimit="1" stroke-linecap="round" stroke-linejoin="round"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M61 25L52 34L61 25Z" stroke="black" stroke-width="4" stroke-miterlimit="1" stroke-linecap="round" stroke-linejoin="round"/>`;
+		svgHTML.innerHTML = `<path ... d="..." /><path ... d="..." />`;
 	} else if (currentFood < 4 && currentFood >= 1) {
 		console.log("angry");
 		monsterSays("angry");
-		svgHTML.innerHTML = `<path d="M56.5 34C58.9853 34 61 31.9853 61 29.5C61 27.0147 58.9853 25 56.5 25C54.0147 25 52 27.0147 52 29.5C52 31.9853 54.0147 34 56.5 34Z" fill="black" stroke="black" stroke-width="2" stroke-miterlimit="1" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M60 18L46 25" stroke="black" stroke-width="4" stroke-miterlimit="1" stroke-linecap="round" stroke-linejoin="round"/>`;
+		svgHTML.innerHTML = `<path ... d="..." /><path ... d="..." />`;
 	} else if (currentFood >= 4) {
 		console.log("happy");
 		monsterSays("happy");
 		svgHTML.innerHTML =
-			'<path d="M64 33L57 26L50 33" stroke="black" stroke-width="4" stroke-miterlimit="1" stroke-linecap="round" stroke-linejoin="round"/>';
+			`<path ... d="..." /><path ... d="..." />`;
 	}
 };
 ```

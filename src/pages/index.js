@@ -14,41 +14,37 @@ const IndexPage = ({ data }) => {
 			<AboveFoldText />
 			{/* <AboutMe /> */}
 			<div className='gridMain'>
-				<main className='mainContent' id='test'>
+				<main className='mainContent' id='content-start'>
 					<ul className='flexContent'>
 						{data.allMdx.nodes.map((node) => (
 							/* console.log(node), */
 
 							<li key={node.id} className={style.liCard}>
-								<div className={style.liCardTop}>
-									<h2>
-										<Link to={`/portfolio/${node.slug}`}>
-											{node.frontmatter.title}
-										</Link>
-									</h2>
-									<p>
-										<time>{node.frontmatter.date}</time>
-									</p>
-								</div>
-								<GatsbyImage
-									image={getImage(node.frontmatter.hero_image)}
-									alt={node.frontmatter.hero_image_alt}
-								/>
-								<p>{node.frontmatter.blurb}</p>
-								{/* <MDXRenderer>{node.body}</MDXRenderer> */}
-								{console.log(node.frontmatter.tech_stack)}
-								<ul className={style.list} id='scrollGoal'>
-									{node.frontmatter.tech_stack.map((tech, i) => (
-										<li key={i} className={style.list}>
-											<div className={style.techIcons}>
-												<img
-													src={iconSwitch({ tech })}
-													className={style.iconSvg}
-												/>
-											</div>
-										</li>
-									))}
-								</ul>
+								<Link to={`/portfolio/${node.slug}`}>
+									<div className={style.liCardTop}>
+										<h2>{node.frontmatter.title}</h2>
+										<p>
+											<time>{node.frontmatter.date}</time>
+										</p>
+									</div>
+									<GatsbyImage
+										image={getImage(node.frontmatter.hero_image)}
+										alt={node.frontmatter.hero_image_alt}
+									/>
+									<p>{node.frontmatter.blurb}</p>
+									{/* <MDXRenderer>{node.body}</MDXRenderer> */}
+									{console.log(node.frontmatter.tech_stack)}
+									<ul className={style.list}>
+										{node.frontmatter.tech_stack.map((tech, i) => (
+											<li key={i} className={style.list}>
+												<div className={style.techIcons}>
+													{iconSwitch({ tech })}
+													<p>{tech}</p>
+												</div>
+											</li>
+										))}
+									</ul>
+								</Link>
 							</li>
 						))}
 					</ul>
@@ -62,7 +58,7 @@ export const query = graphql`
 		allMdx(sort: { fields: frontmatter___date, order: DESC }) {
 			nodes {
 				frontmatter {
-					date(formatString: "MMMM D, YYYY")
+					date(formatString: "MMMM, YYYY")
 					title
 					blurb
 					tech_stack

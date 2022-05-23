@@ -36,7 +36,7 @@ module.exports = {
 				name: 'Egil J. Swenning Leyser',
 				start_url: '/',
 				background_color: '#000',
-				theme_color: '#6b37bf',
+				theme_color: '#9168d2',
 
 				icons: [
 					{

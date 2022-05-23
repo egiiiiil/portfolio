@@ -2,31 +2,31 @@
 body {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
 		Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	color: #020202;
+	color: var(--text-color);
 	font-size: 16;
 }
 .navName {
-	font-family: "Fira Code";
+	font-family: "Fira Code", monospace;
 	font-weight: 200;
 }
 /* COLOUR */
 a:link {
-	color: #020202;
+	color: var(--text-color-link);
 }
 a:visited {
-	color: #020202;
+	color: var(--text-color-link);
 }
 a:hover {
-	color: #020202;
+	color: var(--text-color-link);
 }
 a:active {
-	color: #020202;
+	color: var(--text-color-link);
 }
 footer {
-	color: #efefef;
+	color: var(--text-color-footer);
 }
 footer ul li a:link {
-	color: #efefef;
+	color: var(--text-color-footer);
 }
 /* FONT SIZE */
 .navBack {
@@ -53,6 +53,7 @@ footer {
 a[href]:not(:where(
   /* exclude hash only links */
   [href^="#"],
+	[href^="mailto:"], 
   /* exclude relative but not double slash only links */
   [href^="/"]:not([href^="//"]),
   /* domains to exclude */

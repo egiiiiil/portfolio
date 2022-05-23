@@ -3,3 +3,17 @@
 	width: 1em;
 	margin-right: 0.5em;
 }
+.notFoundPageContainer {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.shrug {
+	background: url('../../images/mesh-gradient-negroni.png');
+	background-size: 400% 400%;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
+	margin: 0;
+	font-size: 13em;
+}

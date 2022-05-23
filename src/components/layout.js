@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-/* import '@fontsource/montserrat' */
+//import getInitialColorMode from '../utils/getInitialColorMode'
 import './font.css'
-import './colors.css'
+
 import './layout.css'
 import Navbar from './Navbar/Navbar'
 import Footer from './Footer/Footer'
@@ -20,20 +20,15 @@ const Layout = ({ pageTitle, children }) => {
 	`)
 	return (
 		<>
-			{console.log(
-				console.log(
-					'%cHello',
-					'color: white; font-family: system-ui; font-size: 20px'
-				)
-			)}
+			<Helmet htmlAttributes={{ lang: 'en-GB' }}>
+				<title>
+					{pageTitle} | {data.site.siteMetadata.title}
+				</title>
+				<link rel='icon' href='/favicon.ico' sizes='any' />
+				<link rel='icon' href='/iconsvg.svg' type='image/svg+xml' />
+			</Helmet>
+
 			<div className='gridContainer'>
-				<Helmet>
-					<title>
-						{pageTitle} | {data.site.siteMetadata.title}
-					</title>
-					<link rel='icon' href='/favicon.ico' sizes='any' />
-					<link rel='icon' href='/iconsvg.svg' type='image/svg+xml' />
-				</Helmet>
 				<Navbar />
 				<>{children}</>
 				<Footer />

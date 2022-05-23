@@ -1,3 +1,4 @@
+@import '../components/vars.css';
 .liCard {
 	list-style: none;
 	width: 42%;
@@ -6,17 +7,17 @@
 	/* margin: 0.5em; */
 	
 	border-radius: 20px;
-	background: #ffffff;
-	box-shadow: 
-							 15px 15px 30px #d9d9d9,
-             -15px -15px 30px #ffffff;
+	background: var(--background-color-white);
+	box-shadow: var(--box-shadow-big)
 }
 @media only screen and (max-width: 768px) {
 	.liCard {
 		width: 100%;
 	}
 }
-
+.liCard a {
+	text-decoration: none;
+}
 .liCard h2 {
 	font-size: 1.2em;
 }
@@ -58,5 +59,22 @@
 	flex-wrap: wrap;
 	gap: 1em;
 }
-
-.iconSvg {width: 2.5em;}
+.techIcons {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* fill: var(--text-color); */
+}
+.techIcons svg {
+	width: 2em;
+	height: 2em;
+	fill: var(--text-color);
+}
+.techIcons svg path{
+	fill: var(--text-color);
+}
+.techIcons p {
+	font-size: 0.8em;
+	color: #858585;
+}
+.iconSvg {width: 1.8em;}

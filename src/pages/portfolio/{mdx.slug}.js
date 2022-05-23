@@ -35,9 +35,6 @@ const PortfolioPost = ({ data }) => {
 						image={image}
 						alt={data.mdx.frontmatter.hero_image_alt}
 					/>
-					{/* {console.log(data.mdx.frontmatter)} */}
-
-					{/* 				{data.mdx.frontmatter.tech_stack.map((node) => console.log(node))} */}
 					<div className={style.contentContainer}>
 						<aside>
 							<h3>Tech stack:</h3>
@@ -45,16 +42,9 @@ const PortfolioPost = ({ data }) => {
 								{data.mdx.frontmatter.tech_stack.map((tech, i) => (
 									<li key={i} className={style.listItem}>
 										{console.log({ tech })}
-										{/* <StaticImage
-											src={`../images/techStack/${switchCase({ tech })}.svg`}
-											alt={tech}
-										/> */}
 										<div className={style.techIcons}>
-											<img
-												src={iconSwitch({ tech })}
-												className={style.iconSvg}
-												alt=''
-											/>
+											{iconSwitch({ tech })}
+											<p>{tech}</p>
 										</div>
 									</li>
 								))}
@@ -75,7 +65,7 @@ export const query = graphql`
 			body
 			frontmatter {
 				title
-				date(formatString: "MMMM DD, YYYY")
+				date(formatString: "MMMM, YYYY")
 				hero_image_alt
 				hero_image {
 					childImageSharp {

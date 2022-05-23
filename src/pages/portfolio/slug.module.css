@@ -1,7 +1,9 @@
+/* @import '../../components/vars.css'; */
 .backSpan { display: flex; }
 .backSpan svg { 
 	width: 1em;
 	margin-right: 0.5em;
+	fill: var(--text-color);
 }
 .topInfo{
 	display: flex;
@@ -16,6 +18,7 @@
 	font-size: 1em;
 	color: #858585;
 }
+
 .contentContainer {
 	display: flex;
 	flex-direction: row-reverse;
@@ -38,20 +41,35 @@
 	list-style-type: none;
 
 }
-.contentContainer .techIcons {
 
-}
-.iconSvg {width: 2.5em;}
+.iconSvg {width: 1.8em;}
 
 pre {
 	margin: 1em;
 	white-space: pre-wrap;
-	background-color: #202020;
-	color: white;
+	background-color: var(--background-color-code);
+	color: var(--text-color-code);
 	border-radius: 10px;
 	padding: 1em;
 	box-shadow: 
 	15px 15px 30px #d9d9d9,
 -15px -15px 30px #ffffff;
 }
-/* img {border-radius: 10px;} */
+.techIcons {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* fill: var(--text-color); */
+}
+.techIcons svg {
+	width: 2em;
+	height: 2em;
+	fill: var(--text-color);
+}
+.techIcons svg path{
+	fill: var(--text-color);
+}
+.techIcons p {
+	font-size: 0.8em;
+	color: #858585;
+}

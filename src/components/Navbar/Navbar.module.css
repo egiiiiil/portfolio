@@ -1,3 +1,5 @@
+/* @import '../vars.css'; */
+
 .navLinks {
 	display: flex;
 	list-style: none;
@@ -11,6 +13,10 @@
 .navLinkItem:nth-child(2) {
 	flex-grow: 1;
 }
-.navLinkText {
-	color: black;
+/* .navLinkText {
+	color: var(--text-color-link);
+} */
+.navLinkH1 {
+	font-size: 1em;
+	font-weight: 100;
 }
