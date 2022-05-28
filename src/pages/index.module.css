@@ -1,7 +1,7 @@
 @import '../components/vars.css';
 .liCard {
 	list-style: none;
-	width: 42%;
+	width: 40%;
 
 	padding: 1.5em;
 	/* margin: 0.5em; */
@@ -10,7 +10,7 @@
 	background: var(--background-color-white);
 	box-shadow: var(--box-shadow-big)
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 750px) {
 	.liCard {
 		width: 100%;
 	}
@@ -58,6 +58,8 @@
 	display: flex;
 	flex-wrap: wrap;
 	gap: 1em;
+	justify-content: flex-start;
+	
 }
 .techIcons {
 	display: flex;

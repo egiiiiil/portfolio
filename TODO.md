@@ -1,11 +1,11 @@
 # TODO:
 
-- Add ‘Hyper Island Student Project to Hero Image where it’s needed.
-- Preserve scrolling on link
-- favicon ?
-- 404
-  -credits for everything
+- credits for everything
+- clean up the dark mode code
 
+✓ favicon ?
+✓ 404
+✓ Preserve scrolling on link
 ✓ Smooth scrolling
 ✓ link on card, not text
 ✓ footer console.log styling
@@ -18,5 +18,6 @@
 ✓ Date without date only month and year
 ✓ footer input
 ✓ theme color, decide on one general colour
+✓ media query card size
 
 ✗ same height on all cards

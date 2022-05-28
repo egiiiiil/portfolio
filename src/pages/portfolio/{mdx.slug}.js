@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { graphql, Link } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Layout from '../../components/layout'
 import iconSwitch from '../../utils/iconSwitch'
 
@@ -41,7 +41,6 @@ const PortfolioPost = ({ data }) => {
 							<ul className={style.list}>
 								{data.mdx.frontmatter.tech_stack.map((tech, i) => (
 									<li key={i} className={style.listItem}>
-										{console.log({ tech })}
 										<div className={style.techIcons}>
 											{iconSwitch({ tech })}
 											<p>{tech}</p>

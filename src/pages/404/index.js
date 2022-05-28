@@ -3,9 +3,6 @@ import { Link } from 'gatsby'
 import Layout from '../../components/layout'
 import * as style from './index.module.css'
 
-import backgroundImg from '../../images/mesh-gradient-negroni.png'
-
-// markup
 const NotFoundPage = () => {
 	return (
 		<Layout pageTitle='404 Page'>
@@ -23,11 +20,8 @@ const NotFoundPage = () => {
 					</nav>
 					<title>404 | Not found</title>
 					<div className={style.notFoundPageContainer}>
-						<h2 class>404 | Not found</h2>
-						<p className={style.shrug} aria-description='A shrug emoji'>
-							¯\_(ツ)_/¯
-						</p>
-						{/* <img src={backgroundImg} /> */}
+						<h2>404 | Not found</h2>
+						<p className={style.shrug}>¯\_(ツ)_/¯</p>
 					</div>
 				</main>
 			</div>

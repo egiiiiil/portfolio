@@ -1,13 +1,9 @@
 import * as React from 'react'
 import * as style from './AboveFoldText.module.css'
-//import { StaticImage } from 'gatsby-plugin-image'
 import { navigate } from 'gatsby'
 import '../layout.css'
 
 const AboveFoldText = () => {
-	//let location = document.getElementById('test')
-	//console.log('aaaaa', location)
-	//document.getElementById('id').scrollIntoView();
 	return (
 		<aside className='gridAboveFoldText'>
 			<div className={style.aboveFoldText__container}>
@@ -16,18 +12,21 @@ const AboveFoldText = () => {
 					Frontend, React, UX, and UI <wbr /> from Uppsala, Sweden.
 				</p>
 				<p className={style.aboveFoldText__text}>
-					My hobbies include 🏋️, 🍔, 🍕, ☕️, 🍺, 🌮 and 🍣.
+					My hobbies include 🏋️, 🍔, 🍕, ☕️, 🌮 and 🍣.
 				</p>
 				<p className={style.aboveFoldText__text}>
 					Contact me at{' '}
-					<a href='mailto:test@example.com?subject=Hello!'>
-						hello@egilswenningleyser.dev
+					<a href='mailto:hello@egilswenningleyser.dev?subject=Hello!'>
+						hello@egil
+						<wbr />
+						swenning
+						<wbr />
+						leyser.dev
 					</a>
 				</p>
 
 				<button
 					onClick={() => {
-						console.log('aaaa')
 						navigate('#content-start')
 					}}
 				>

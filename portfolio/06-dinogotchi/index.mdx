@@ -1,27 +1,24 @@
 ---
 title: 'Dinogotchi'
 date: '2021-10-07'
-hero_image: './dinogotchi.png'
+hero_image: './index.png'
 hero_image_alt: 'The pink T-Rex from Dinogotchi on a yellow background'
 tech_stack: [Vanilla JS, LocalStorage, SASS]
 blurb: 'A pet game where you try to keep the dinosaur alive.'
-logo_image: './dinogotchi-logo.png'
-logo_image_alt: 'Dinogotchi logotype'
 ---
 
 [GitHub Repo](https://github.com/egiiiiil/dream-team-module-2)
 
 [Live version](https://egiiiiil.github.io/dinogotchi/)
 
-A group project at Hyper Island game where you try to keep the dinosaur alive. Like a Tamagotchi but with a dinosaur. Keep it fed and don’t let it die!
+AA group project at Hyper Island to create a game where you try to keep the dinosaur alive. Like a Tamagotchi but with a dinosaur. Keep it fed and don’t let it die!
 
 The minimum requirements for this project were to use `Date()` and `localStorage`.
 
-The main parts are the monster object that gets sent to `localStorage`
+The main parts are the object contain object that gets sent to `localStorage`
 
 ```
 function createMonsterObject() {
-	//monster object
 	monster = {
 		startDate: "",
 		endDate: "",
@@ -37,7 +34,6 @@ function createMonsterObject() {
 		moodHappy: true,
 	};
 
-	//push monster object to local storage
 	localStorage.setItem("monster", JSON.stringify(monster));
 }
 ```

@@ -12,6 +12,7 @@ body {
 /* COLOUR */
 a:link {
 	color: var(--text-color-link);
+	margin-right: 0.2em;
 }
 a:visited {
 	color: var(--text-color-link);
@@ -28,12 +29,40 @@ footer {
 footer ul li a:link {
 	color: var(--text-color-footer);
 }
+
+a[href]:not(:where(
+  /* exclude hash only links */
+  [href^="#"],
+	[href^="mailto:"], 
+  /* exclude relative but not double slash only links */
+  [href^="/"]:not([href^="//"]),
+  /* domains to exclude */
+  [href*="//egilswenningleyser.dev"],
+)):after {
+	display: inline-flex;
+	padding-left: 0.2em;
+  content: '↗';
+	text-decoration: none;
+	display: inline-block;
+	
+}
+
 /* FONT SIZE */
 .navBack {
 	font-size: 1rem;
 }
+h1 {
+	font-family: "Fira Code";
+}
+h2 {
+	font-size: 1.2em;
+}
+p time {
+	font-size: 1em;
+}
 main p {
 	font-size: 1rem;
+	line-height: 1.6em;
 }
 main code {
 	font-size: 1rem;
@@ -47,19 +76,4 @@ main p time {
 }
 footer {
 	font-size: 1rem;
-}
-
-/* VISUAL */
-a[href]:not(:where(
-  /* exclude hash only links */
-  [href^="#"],
-	[href^="mailto:"], 
-  /* exclude relative but not double slash only links */
-  [href^="/"]:not([href^="//"]),
-  /* domains to exclude */
-  [href*="//egilswenningleyser.dev"],
-)):after {
-	display: inline-flex;
-	padding-left: 0.4em;
-  content: url("../images/a-tag__regular.svg");
 }

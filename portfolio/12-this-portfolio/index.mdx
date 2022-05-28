@@ -1,46 +1,38 @@
 ---
 title: 'Portfolio'
 date: '2022-05-14'
-hero_image: './portfolio.png'
+hero_image: './index.png'
 hero_image_alt: 'An image of the portfolio'
 tech_stack: [Gatsby, MDX, GraphiQL]
 blurb: 'This Portfolio.'
-logo_image: './portfolio-logo.png'
-logo_image_alt: 'Portfolio logotype'
-embeddedImagesLocal:
-	- 'images/techStack/gatsby.svg'
 ---
 
-[GitHub Repo](https://github.com/egiiiiil/hyperisland-mod1)
+[GitHub Repo](https://github.com/egiiiiil/portfolio)
 
 [Live version](https://egilswenningleyser.dev)
 
-## Folder structure
-
-With a folder structure like this
+I made the portfolio with a folder structure like this:
 
 ```
-MyProj
+Portfolio
 ├──/portfolio
-│   ├──/01-
-│   │   ├──index.mdx
-│   │   ├──img.png
-│   │   └──logo.svg
-│   ├──/02
-│   └──/03
-├──/srs
-│   └─/image
-│      └─/itemImage
+│  ├──/01
+│  │  ├──index.mdx
+│  │  └──index.png
+│  ├──/02
+│  └──/03
+└──/srs
+   ├──/components
+   ├──/image
+   │  └──/itemImage
+   ├──/pages
+   │  ├──/404
+   │  ├──/portfolio
+   │  └──index.js
+   └──/utils
+      └──indexSwitch.js
 ```
 
-## Cms
+It made it easy to separate the code from the content and if I have to change how I store the content it wouldn't require a lot of code changes.
 
-But not really. I kept it simple with `.mdx` files.
-
-## Dark mode 🌓
-
-With `prefers-color-scheme` the preferred colour scheme will show. But you can change it if you want.
-
-## Credits
-
-icons from Frontawasome, devicon etc...
+I chose not to really have a CMS but just use `.mdx` files to have the site easy to keep updated without having to have a database. For a site this size it was enough with markdown files with some meta data for the content.

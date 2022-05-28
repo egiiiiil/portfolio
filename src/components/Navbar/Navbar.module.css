@@ -1,21 +1,24 @@
 /* @import '../vars.css'; */
 
 .navLinks {
+	height: 60px;
+	margin: 0;
 	display: flex;
 	list-style: none;
-	padding: 0 1em;
+	padding: 0 0.5em;
 	justify-content: space-between;
 	gap: 1em;
-	align-items: baseline;
+	align-items: center;
 	font-size: 1.2em;
 }
 
+.navLinkItem:nth-child(1) {
+	align-self: baseline;
+}
 .navLinkItem:nth-child(2) {
 	flex-grow: 1;
 }
-/* .navLinkText {
-	color: var(--text-color-link);
-} */
+
 .navLinkH1 {
 	font-size: 1em;
 	font-weight: 100;

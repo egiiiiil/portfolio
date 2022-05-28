@@ -16,7 +16,6 @@ const DarkModeButton = () => {
 	const ThemeToggle = () => {
 		window.__setPreferredTheme(websiteTheme === 'dark' ? 'light' : 'dark')
 		setTheme(websiteTheme === 'dark' ? 'light' : 'dark')
-		console.log(setTheme)
 	}
 
 	return (

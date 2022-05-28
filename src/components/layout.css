@@ -7,7 +7,8 @@
 	--text-color-footer: #efefef;
 	--text-color-input: #efefef;
 	--text-color-code: #efefef;
-	--scrollbar-foreground: #9168d2;
+	--text-color-above: #020202;
+	--theme-color: #b968d2;
 	--box-shadow-big: 15px 15px 30px #d9d9d9,
 	-15px -15px 30px #ffffff;
 	--button-shadow-small: 5px 5px 10px #d9d9d9,
@@ -21,13 +22,13 @@
 :root.dark {
 	--background-color-black: #efefef;
 	--background-color-white: #212121;
-	--background-color-code: #efefef;
+	/* --background-color-code: #efefef; */
 	--text-color: #efefef; 
 	--text-color-link: #efefef;
 	--text-color-footer: #212121;
 	--text-color-input: #212121;
-	--text-color-code: #212121;
-	--scrollbar-foreground: #9168d2;
+	/* --text-color-code: #212121; */
+	--theme-color: #9168d2;
 	--box-shadow-big: 15px 15px 30px #1c1c1c,
 	-15px -15px 30px #262626;
 	--button-shadow-small: 5px 5px 10px #1c1c1c,
@@ -53,7 +54,7 @@ body {
 	margin:0; 
 	background-color: var(--background-color-black);
 	width: 100wv;
-  scrollbar-color: var(--scrollbar-foreground);
+  scrollbar-color: var(--theme-color);
 	overflow: overlay;
 	
 }
@@ -63,7 +64,7 @@ body::-webkit-scrollbar {
 
 }
 body::-webkit-scrollbar-thumb {
-  background: var(--scrollbar-foreground);
+  background: var(--theme-color);
 	border-radius: 10px;
 }
 /* body::-webkit-scrollbar-track {
@@ -90,20 +91,17 @@ body::-webkit-scrollbar-thumb {
 	-webkit-box-shadow: 0px 0px 19px -3px #000000; 
 	box-shadow: 0px 0px 19px -3px #000000;
 	z-index: 2;
+	height: calc(60px);
+	
+	
 }
 .gridAboveFoldText {
 	grid-column: 1 / 4;
 	grid-row: 2 / 2;
-	height: 90vh;
+	min-height: 90vh;
+	width: 100vw;
 }
-.gridAboutMe {
-	grid-column: 1 / 4;
-	height: 22em;
-	background-color: var(--background-color-white);
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-}
+
 .gridMain {
 	grid-column: 1 / 4;
 	padding-bottom: 10em;
@@ -113,7 +111,7 @@ body::-webkit-scrollbar-thumb {
 	background-color: var(--background-color-white);
 }
 .mainContent {
-	width: 90%;
+	width: 90vw;
 }
 .flexContent {
 	display: flex;
@@ -136,5 +134,7 @@ body::-webkit-scrollbar-thumb {
   left: 0;
 	height: 10em;
 	display: flex;
-	align-items: flex-end;
+	flex-direction: column;
+	justify-content: space-between;
+	
 }

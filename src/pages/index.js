@@ -7,18 +7,13 @@ import { Link, graphql } from 'gatsby'
 import iconSwitch from '../utils/iconSwitch'
 import * as style from './index.module.css'
 const IndexPage = ({ data }) => {
-	/* console.log(data) */
-
 	return (
 		<Layout pageTitle='Home Page'>
 			<AboveFoldText />
-			{/* <AboutMe /> */}
 			<div className='gridMain'>
 				<main className='mainContent' id='content-start'>
 					<ul className='flexContent'>
 						{data.allMdx.nodes.map((node) => (
-							/* console.log(node), */
-
 							<li key={node.id} className={style.liCard}>
 								<Link to={`/portfolio/${node.slug}`}>
 									<div className={style.liCardTop}>
@@ -32,8 +27,6 @@ const IndexPage = ({ data }) => {
 										alt={node.frontmatter.hero_image_alt}
 									/>
 									<p>{node.frontmatter.blurb}</p>
-									{/* <MDXRenderer>{node.body}</MDXRenderer> */}
-									{console.log(node.frontmatter.tech_stack)}
 									<ul className={style.list}>
 										{node.frontmatter.tech_stack.map((tech, i) => (
 											<li key={i} className={style.list}>

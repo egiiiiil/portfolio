@@ -1,6 +1,6 @@
 module.exports = {
 	siteMetadata: {
-		title: 'Egil J. Swenning Leyser',
+		title: 'Egil Swenning Leyser',
 	},
 	/* flags: {
 		PARALLEL_QUERY_RUNNING: true,
@@ -9,6 +9,7 @@ module.exports = {
 		'gatsby-plugin-image',
 		'gatsby-plugin-sharp',
 		'gatsby-plugin-react-helmet',
+
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
@@ -36,16 +37,16 @@ module.exports = {
 				name: 'Egil J. Swenning Leyser',
 				start_url: '/',
 				background_color: '#000',
-				theme_color: '#9168d2',
+				theme_color: '#b968d2',
 
 				icons: [
 					{
-						src: '/icon192.png',
+						src: '/static/192.png',
 						type: 'image/png',
 						sizes: '192x192',
 					},
 					{
-						src: '/icon512.png',
+						src: '/static/512.png',
 						type: 'image/png',
 						sizes: '512x512',
 					},

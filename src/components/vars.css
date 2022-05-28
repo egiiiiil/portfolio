@@ -7,7 +7,7 @@
 	--text-color-footer: #efefef;
 	--text-color-input: #efefef;
 	--text-color-code: #efefef;
-	--scrollbar-foreground: #9168d2;
+	--theme-color: #9168d2;
 }
 :root.dark {
 	--background-color-black: #efefef;
@@ -18,5 +18,5 @@
 	--text-color-footer: #020202;
 	--text-color-input: #020202;
 	--text-color-code: #020202;
-	--scrollbar-foreground: #9168d2;
+	--theme-color: #9168d2;
 } */

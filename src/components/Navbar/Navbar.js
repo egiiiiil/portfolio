@@ -21,13 +21,11 @@ const Navbar = () => {
 			<nav>
 				<ul className={style.navLinks}>
 					<li className={style.navLinkItem}>
-						<span className='navName'>
-							<Link to='/' className={style.navLinkText}>
-								<h1 className={style.navLinkH1}>
-									{data.site.siteMetadata.title}
-								</h1>
-							</Link>
-						</span>
+						<Link to='/'>
+							<h1 className={style.navLinkH1}>
+								{data.site.siteMetadata.title}
+							</h1>
+						</Link>
 					</li>
 					<li>
 						<DarkModeButton />

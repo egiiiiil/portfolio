@@ -35,3 +35,6 @@ input[type=text].footerInput {
 	border: none;
 	color: var(--text-color)
 }
+.formContent {
+	display: inline-flex;
+}
