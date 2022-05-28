@@ -1,33 +1,42 @@
 import * as React from 'react'
-import { Link, useStaticQuery, graphql } from 'gatsby'
-import '@fontsource/montserrat'
+import { useStaticQuery, graphql } from 'gatsby'
 import './font.css'
-import './colors.css'
+
 import './layout.css'
 import Navbar from './Navbar/Navbar'
 import Footer from './Footer/Footer'
+import { Helmet } from 'react-helmet'
+import svg from '../icon.svg'
+import ico from '../favicon.ico'
+import apple from '../apple-touch-icon.png'
 
 const Layout = ({ pageTitle, children }) => {
 	const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+		query {
+			site {
+				siteMetadata {
+					title
+				}
+			}
+		}
+	`)
 	return (
-		<div className="site-grid-container">
-			<title>{pageTitle} | {data.site.siteMetadata.title}</title>
-      <div className="site-grid-nav">
+		<>
+			<Helmet htmlAttributes={{ lang: 'en-GB' }}>
+				<title>
+					{pageTitle} | {data.site.siteMetadata.title}
+				</title>
+				<link rel='icon' href={ico} sizes='any' />
+				<link rel='icon' href={svg} type='image/svg+xml' />
+				<link rel='apple-touch-icon' href={apple} />
+			</Helmet>
+
+			<div className='gridContainer'>
 				<Navbar />
+				<>{children}</>
+				<Footer />
 			</div>
-			<>
-				{children}
-			</>
-			<Footer />
-		</div>
+		</>
 	)
 }
 export default Layout

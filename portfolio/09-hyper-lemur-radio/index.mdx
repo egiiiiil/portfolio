@@ -1,0 +1,29 @@
+---
+title: 'Hyper Lemur Radio'
+date: '2022-01-20'
+hero_image: './index.png'
+hero_image_alt: 'A screenshot of Hyper Lemur Radio'
+tech_stack: [React, SR API, SASS]
+blurb: 'A small web player for the Swedish Radio live channels.'
+---
+
+[GitHub Repo](https://github.com/egiiiiil/hyper-lemur-radio)
+
+[Live version](https://hyper-lemur-radio.vercel.app/)
+
+A small web player for live channels from Radio Sweden built with React. Using `createContext()` to send the picked channel from the list to the player.
+
+```
+<MediaPlayerContext.Provider
+  value={{
+    channelList,
+    setChannelList,
+    pickedchannel,
+    setPickedchannel,
+	}}
+	>
+  {children}
+</MediaPlayerContext.Provider>
+```
+
+This made sending the picked channel to the player easy. The player itself is a standard `<audio>` tag and the channel image.

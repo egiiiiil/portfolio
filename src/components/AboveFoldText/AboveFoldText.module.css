@@ -1,0 +1,59 @@
+/* @import '../vars.css'; */
+.aboveFoldText__text {
+	font-size: 46px;
+	font-weight: 900;
+	letter-spacing: 0.08em;
+	line-height: 1.4em;
+	color: var(--text-color-above);
+}
+.aboveFoldText__text a {
+	color: var(--text-color-above);
+	text-decoration-color: var(--text-color-above);
+}
+.aboveFoldText__text a:hover {
+	color: var(--text-color-above);
+	text-decoration-color: var(--theme-color);
+}
+@media screen and (min-width: 320px) {
+	.aboveFoldText__text {
+		font-size: calc(33px + 8 * ((100vw - 320px) / 960));
+		margin-bottom: 1em;
+	}
+}
+@media screen and (min-width: 500px) {
+	.aboveFoldText__text {
+		font-size: 30px;
+		margin-bottom: 1em;
+	}
+}
+
+
+.aboveFoldText__container{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	height: 100%;
+	background-image: url("../../images/mesh-gradient.png");
+	background-color: var(--background-color-white);
+	background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+	padding: 1em;
+}
+
+
+.aboveFoldText__svg {
+	width: 3em
+}
+.aboveFoldText__svg:hover {
+	transform: scale(1.3);
+	animation-timing-function: ease-in-out;
+}
+
+.aboveFoldText__container button {
+	background-color: transparent;
+	border: none;
+	align-self: center;
+	margin: 3em;
+}

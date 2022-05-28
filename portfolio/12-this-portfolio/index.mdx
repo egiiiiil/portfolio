@@ -1,0 +1,38 @@
+---
+title: 'Portfolio'
+date: '2022-05-14'
+hero_image: './index.png'
+hero_image_alt: 'An image of the portfolio'
+tech_stack: [Gatsby, MDX, GraphiQL]
+blurb: 'This Portfolio.'
+---
+
+[GitHub Repo](https://github.com/egiiiiil/portfolio)
+
+[Live version](https://egilswenningleyser.dev)
+
+I made the portfolio with a folder structure like this:
+
+```
+Portfolio
+├──/portfolio
+│  ├──/01
+│  │  ├──index.mdx
+│  │  └──index.png
+│  ├──/02
+│  └──/03
+└──/srs
+   ├──/components
+   ├──/image
+   │  └──/itemImage
+   ├──/pages
+   │  ├──/404
+   │  ├──/portfolio
+   │  └──index.js
+   └──/utils
+      └──indexSwitch.js
+```
+
+It made it easy to separate the code from the content and if I have to change how I store the content it wouldn't require a lot of code changes.
+
+I chose not to really have a CMS but just use `.mdx` files to have the site easy to keep updated without having to have a database. For a site this size it was enough with markdown files with some meta data for the content.

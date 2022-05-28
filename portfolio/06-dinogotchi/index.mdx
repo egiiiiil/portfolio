@@ -1,0 +1,81 @@
+---
+title: 'Dinogotchi'
+date: '2021-10-07'
+hero_image: './index.png'
+hero_image_alt: 'The pink T-Rex from Dinogotchi on a yellow background'
+tech_stack: [Vanilla JS, LocalStorage, SASS]
+blurb: 'A pet game where you try to keep the dinosaur alive.'
+---
+
+[GitHub Repo](https://github.com/egiiiiil/dream-team-module-2)
+
+[Live version](https://egiiiiil.github.io/dinogotchi/)
+
+AA group project at Hyper Island to create a game where you try to keep the dinosaur alive. Like a Tamagotchi but with a dinosaur. Keep it fed and don’t let it die!
+
+The minimum requirements for this project were to use `Date()` and `localStorage`.
+
+The main parts are the object contain object that gets sent to `localStorage`
+
+```
+function createMonsterObject() {
+	monster = {
+		startDate: "",
+		endDate: "",
+		currentTime: "",
+		aliveTime: "",
+		neededSleep: 8,
+		actualSleep: "",
+		neededFood: 4,
+		currentFood: 10,
+		maxFood: 10,
+		neededPlayTime: 2, //two clicks
+		currentPlayTime: "",
+		moodHappy: true,
+	};
+
+	localStorage.setItem("monster", JSON.stringify(monster));
+}
+```
+
+And the dinosaur graphic that’s just an SVG where parts like the eyes get updated. Since the eyes and arms ere grouped within the SVG it made updating the based on that’s happening in the game and animations easy.
+
+```
+<svg class="image" width="389" height="182" viewBox="0 0 389 182" fill="none" xmlns="http://www.w3.org/2000/svg">
+	...
+	<g id="back-arm">
+		...
+	</g>
+	...
+	<g id="front-arm">
+		...
+	</g>
+	<g id="eyes">
+		...
+	</g>
+</svg>
+```
+
+This together with a if-statement makes the code for switching the eyes depending on the hunger.
+
+```
+let hungerEyes = () => {
+	let currentFood = monster.currentFood;
+
+	let svgHTML = document.getElementById("eyes");
+	if (currentFood === 0) {
+		console.log("dead");
+		monsterSays("dead");
+		svgHTML.innerHTML = `<path ... d="..." /><path ... d="..." />`;
+	} else if (currentFood < 4 && currentFood >= 1) {
+		console.log("angry");
+		monsterSays("angry");
+		svgHTML.innerHTML = `<path ... d="..." /><path ... d="..." />`;
+	} else if (currentFood >= 4) {
+		console.log("happy");
+		monsterSays("happy");
+		svgHTML.innerHTML =
+			`<path ... d="..." /><path ... d="..." />`;
+	}
+};
+```

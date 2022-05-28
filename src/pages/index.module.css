@@ -1,0 +1,82 @@
+@import '../components/vars.css';
+.liCard {
+	list-style: none;
+	width: 40%;
+
+	padding: 1.5em;
+	/* margin: 0.5em; */
+	
+	border-radius: 20px;
+	background: var(--background-color-white);
+	box-shadow: var(--box-shadow-big)
+}
+@media only screen and (max-width: 750px) {
+	.liCard {
+		width: 100%;
+	}
+}
+.liCard a {
+	text-decoration: none;
+}
+.liCard h2 {
+	font-size: 1.2em;
+}
+.liCard p time {
+	font-size: 1em;
+	color: #858585;
+}
+.liCardTop{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: baseline;
+}
+@media only screen and (max-width: 660px) {
+	.liCardTop{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: baseline;
+	}
+}
+.liCard ul {
+	list-style-type: none;
+}
+.contentContainer {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+	margin: 0 auto;
+	gap: 2em;
+}
+.liCard .text {
+	width: 60ch;
+	max-width: 49%;
+}
+.liCard .list  {
+	padding-left: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+	justify-content: flex-start;
+	
+}
+.techIcons {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* fill: var(--text-color); */
+}
+.techIcons svg {
+	width: 2em;
+	height: 2em;
+	fill: var(--text-color);
+}
+.techIcons svg path{
+	fill: var(--text-color);
+}
+.techIcons p {
+	font-size: 0.8em;
+	color: #858585;
+}
+.iconSvg {width: 1.8em;}

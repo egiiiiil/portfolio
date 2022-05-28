@@ -1,0 +1,40 @@
+/* @import '../vars.css'; */
+.svg {
+	height: 1em;
+	fill: #fff;
+}
+#a {
+	color: var(--text-color-footer);
+}
+.flexContainer {
+	display: flex;
+	align-items: center;
+}
+.flexContainer svg {
+	fill: var(--text-color-footer);
+}
+.footerLabel {
+	visibility: hidden;
+	height: 0;
+	width: 0;
+	display: block;
+}
+input[type=text].footerInput {
+	background-color: var(--background-color-black);
+	border: none;
+	height: 2em;
+	margin-left: 0.3em;
+	color: var(--text-color-input);
+	font-family: "Fira Code", monospace;
+	font-size: 1em;
+}
+.footerButton {
+	height: 2em;
+	max-width: fit-content;
+	background-color: var(--background-color-black);
+	border: none;
+	color: var(--text-color)
+}
+.formContent {
+	display: inline-flex;
+}

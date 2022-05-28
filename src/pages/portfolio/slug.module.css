@@ -1,0 +1,81 @@
+/* @import '../../components/vars.css'; */
+.backSpan { display: flex; }
+.backSpan svg { 
+	width: 1em;
+	margin-right: 0.5em;
+	fill: var(--text-color);
+}
+.topInfo{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: baseline;
+}
+.topInfo p time {
+	color: #858585;
+}
+
+.contentContainer {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+	margin: 0 auto;
+	gap: 2em;
+}
+@media only screen and (max-width: 559px) {
+	.contentContainer {
+		flex-direction: column-reverse;
+	}
+}
+.contentContainer .text {
+	width: 60ch;
+	max-width: 60%;
+}
+@media only screen and (max-width: 559px) {
+.contentContainer .text {
+	width: 60ch;
+	max-width: 100%;
+}
+}
+.contentContainer .list  {
+	padding-left: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+	justify-content: space-around;
+}
+
+.contentContainer .listItem {
+	list-style-type: none;
+
+}
+
+.iconSvg {width: 1.8em;}
+
+pre {
+	margin: 1em;
+	white-space: pre-wrap;
+	background-color: var(--background-color-code);
+	color: var(--text-color-code);
+	border-radius: 10px;
+	padding: 1em;
+	box-shadow: var(--box-shadow-big);
+}
+.techIcons {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* fill: var(--text-color); */
+}
+.techIcons svg {
+	width: 2em;
+	height: 2em;
+	fill: var(--text-color);
+}
+.techIcons svg path{
+	fill: var(--text-color);
+}
+.techIcons p {
+	font-size: 0.8em;
+	color: #858585;
+}

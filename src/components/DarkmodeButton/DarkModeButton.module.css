@@ -1,0 +1,27 @@
+.darkmodeButton {
+	height: 2em;
+	width: 2em;
+	padding: 0;
+	border-radius: 50%;
+	font-size: 1em;
+	border: none;
+	color: var(--text-color);
+	background: var(--button-background-small);
+	box-shadow: var(--button-shadow-small)
+}
+
+.darkmodeButton:hover {
+	background: var(--button-background-small__hover);
+	box-shadow: var(--button-shadow-small__active)
+}
+.darkmodeButton:active {
+	background: var(--button-background-small__active);
+	box-shadow: var(--button-shadow-small__active)
+}
+.darkmodeButton svg {
+	height: 2em;
+	width: 2em;
+	fill: var(--text-color);
+	text-align: center;
+	transform: scale(0.5);
+}
