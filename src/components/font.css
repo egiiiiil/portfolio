@@ -52,7 +52,8 @@ a[href]:not(:where(
 	font-size: 1rem;
 }
 h1 {
-	font-family: "Fira Code";
+	font-family: "Fira Code", 'SF Mono', SFMono-Regular, ui-monospace,
+	'DejaVu Sans Mono', Menlo, Consolas, monospace;
 }
 h2 {
 	font-size: 1.2em;
@@ -66,7 +67,8 @@ main p {
 }
 main code {
 	font-size: 1rem;
-	font-family: "Fira Code";
+	font-family: "Fira Code", 'SF Mono', SFMono-Regular, ui-monospace,
+	'DejaVu Sans Mono', Menlo, Consolas, monospace;
 }
 aside ul li {
 	font-size: 1rem;
