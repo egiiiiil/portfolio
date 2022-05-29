@@ -9,6 +9,9 @@ import { Helmet } from 'react-helmet'
 import svg from '../icon.svg'
 import ico from '../favicon.ico'
 import apple from '../apple-touch-icon.png'
+import og from '../portfolio.jpg'
+/* import icon192 from '../192.png'
+import icon512 from '../512.png' */
 
 const Layout = ({ pageTitle, children }) => {
 	const data = useStaticQuery(graphql`
@@ -29,6 +32,17 @@ const Layout = ({ pageTitle, children }) => {
 				<link rel='icon' href={ico} sizes='any' />
 				<link rel='icon' href={svg} type='image/svg+xml' />
 				<link rel='apple-touch-icon' href={apple} />
+				<meta property='og:title' content='title' />
+				<meta
+					property='og:description'
+					content="Egil Swenning Leyser's Portfolio"
+				/>
+				<meta property='og:type' content='website' />
+				<meta
+					property='og:url'
+					content='https://https://egilswenningleyser.dev/'
+				/>
+				<meta property='og:image' content={og} />
 			</Helmet>
 
 			<div className='gridContainer'>
