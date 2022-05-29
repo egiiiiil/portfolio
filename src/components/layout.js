@@ -32,7 +32,7 @@ const Layout = ({ pageTitle, children }) => {
 				<link rel='icon' href={ico} sizes='any' />
 				<link rel='icon' href={svg} type='image/svg+xml' />
 				<link rel='apple-touch-icon' href={apple} />
-				<meta property='og:title' content='title' />
+				<meta property='og:title' content="Egil Swenning Leyser's Portfolio" />
 				<meta
 					property='og:description'
 					content="Egil Swenning Leyser's Portfolio"
